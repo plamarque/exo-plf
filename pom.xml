@@ -8,14 +8,14 @@
   </parent>
   <groupId>org.exoplatform.platform</groupId>
   <artifactId>exo.platform.parent</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.2-rebased</version>
   <packaging>pom</packaging>
   <name>eXo Platform</name>
   <description>Parent POM for platform projects.</description>
   <scm>
-    <connection>scm:svn:http://svn.exoplatform.org/projects/platform/tags/3.0.2</connection>
-    <developerConnection>scm:svn:http://svn.exoplatform.org/projects/platform/tags/3.0.2</developerConnection>
-    <url>http://fisheye.exoplatform.org/browse/platform/tags/3.0.2</url>
+    <connection>scm:svn:http://svn.exoplatform.org/projects/platform/branches/3.0.2-rebased</connection>
+    <developerConnection>scm:svn:http://svn.exoplatform.org/projects/platform/branches/3.0.2-rebased</developerConnection>
+    <url>http://fisheye.exoplatform.org/browse/platform/branches/3.0.2-rebased</url>
   </scm>
   <properties>
     <!-- SNAPSHOTS must be deployed in our private repository -->
@@ -161,16 +161,6 @@
     </dependencies>
   </dependencyManagement>
   <modules>
-    <module>api</module>
-    <module>component</module>
-    <module>web</module>
-    <module>webui</module>
-    <module>extension</module>
-    <module>server</module>
-    <module>doc</module>
-    <module>office</module>
-    <module>samples</module>
-    <module>migration</module>
     <module>packaging</module>
     <module>testsuite</module>
   </modules>
