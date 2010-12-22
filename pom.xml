@@ -162,6 +162,5 @@
   </dependencyManagement>
   <modules>
     <module>packaging</module>
-    <module>testsuite</module>
   </modules>
 </project>

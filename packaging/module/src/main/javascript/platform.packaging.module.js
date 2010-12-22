@@ -9,7 +9,7 @@ function getModule(params)
    var jcr = params.eXoJcr;
    var ws = params.ws;
    var module = new Module();
-   module.version = "${project.version}";
+   module.version = "3.0.2";
    module.relativeMavenRepo = "org/exoplatform/platform";
    module.relativeSRCRepo = "platform";
    module.name = "platform";
