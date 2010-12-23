@@ -9,11 +9,11 @@ function getModule(params)
    var jcr = params.eXoJcr;
    var ws = params.ws;
    var module = new Module();
-   module.version = "${project.version}";
+   module.version = "3.0.3-SNAPSHOT";
    module.relativeMavenRepo = "org/exoplatform/platform";
    module.relativeSRCRepo = "platform";
    module.name = "platform";
-   
+    
    var mopVersion =  "${org.gatein.mop.version}";
    var chromatticVersion =  "${version.chromattic}";
    var reflectVersion =  "${version.reflect}";
@@ -30,7 +30,7 @@ function getModule(params)
    var xcmisVersion = "${org.xcmis.version}";
    var ecmsVersion = "${org.exoplatform.ecms.version}";
    var crashVersion = "${org.crsh.version}";
-
+ 
    // fck editor required for KS & CS
    module.fck = new Project("org.exoplatform.platform", "exo.platform.web.fck", "war", module.version);
    module.fck.deployName = "fck";

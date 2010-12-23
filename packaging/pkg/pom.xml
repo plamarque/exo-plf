@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.exoplatform.platform</groupId>
     <artifactId>exo.platform.packaging</artifactId>
-    <version>3.0.3-SNAPSHOT</version>
+    <version>3.0.2-wiki-preview-SNAPSHOT</version>
   </parent>
   <artifactId>exo.platform.packaging.assembly</artifactId>
   <packaging>pom</packaging>
@@ -50,7 +50,7 @@
     <dependency>
        <groupId>org.exoplatform.platform</groupId>
        <artifactId>exo.platform.server.tomcat.patch</artifactId>
-       <version>${project.version}</version>
+       <version>${org.exoplatform.platform.version}</version>
        <type>jar</type>
     </dependency><!-- 3.0.1-SNAPSHOT-->
     <dependency>
@@ -62,7 +62,7 @@
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.webui.components</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
@@ -213,7 +213,7 @@
     <!--dependency>
 		    <groupId>org.exoplatform.platform</groupId>
 		    <artifactId>exo.platform.extension</artifactId>
-		    <version>${project.version}</version>
+		    <version>${org.exoplatform.platform.version}</version>
 		    <type>jar</type>
 		  </dependency-->
     <!-- ////////////// Deploy dependencies ////////////// -->
@@ -1254,49 +1254,49 @@
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.component.common</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>jar</type>
     </dependency><!-- 3.0.1-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.component.listeners</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>jar</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.office.config</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>jar</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.office.webapp</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>war</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.sample.acme-website.webapp</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>war</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.sample.default-website.webapp</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>war</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.office.officeResources</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>war</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.extension.portlets.platformNavigation</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>war</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
@@ -1308,19 +1308,19 @@
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.sample.acme-website.config</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>jar</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.sample.default-website.config</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>jar</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>exo.platform.extension.webapp</artifactId>
-      <version>${project.version}</version>
+      <version>${org.exoplatform.platform.version}</version>
       <type>war</type>
     </dependency><!-- 3.0.2-SNAPSHOT-->
     <dependency>
@@ -1549,7 +1549,7 @@
             <phase>package</phase>
             <goals>
               <goal>copy</goal>
-            </goals>
+            </goals> 
             <configuration>
               <outputDirectory>${project.build.directory}/jbosseap/server/default/deploy</outputDirectory>
               <artifactItems>
@@ -1577,7 +1577,7 @@
 				  <version>${org.exoplatform.ecms.version}</version>
 				  <type>ear</type>
 				</artifactItem>
-				<artifactItem>
+				<artifactItem> 
 				  <groupId>org.exoplatform.ks</groupId>
 				  <artifactId>exo.ks.extension.ear</artifactId>
 				  <version>${org.exoplatform.ks.version}</version>
@@ -1586,25 +1586,25 @@
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.extension.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.sample.acme-website.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.sample.default-website.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.office.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
@@ -1754,25 +1754,25 @@
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.extension.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.sample.acme-website.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.sample.default-website.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.office.ear</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>ear</type>
 				</artifactItem>
 				<artifactItem>
