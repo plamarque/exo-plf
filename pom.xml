@@ -29,7 +29,7 @@
     <org.exoplatform.ws.version>2.1.6-GA</org.exoplatform.ws.version>
     <org.exoplatform.jcr.version>1.12.6-GA</org.exoplatform.jcr.version>
     <org.exoplatform.jcr-services.version>1.12.6-GA</org.exoplatform.jcr-services.version>
-    <org.exoplatform.portal.version>3.1.6-PLF</org.exoplatform.portal.version>
+    <org.exoplatform.portal.version>3.1.6-rebased-SNAPSHOT</org.exoplatform.portal.version>
     <!--org.exoplatform.portal.version>3.1.6-rebased-SNAPSHOT</org.exoplatform.portal.version-->    <!-- this is the key change of this build -->
     <org.exoplatform.cs.version>2.1.2</org.exoplatform.cs.version>
     <org.exoplatform.ks.version>2.1.2</org.exoplatform.ks.version>
