@@ -29,6 +29,7 @@
     <org.exoplatform.jcr.version>1.12.6-GA</org.exoplatform.jcr.version>
     <org.exoplatform.jcr-services.version>1.12.6-GA</org.exoplatform.jcr-services.version>
     <org.exoplatform.portal.version>3.1.6-PLF</org.exoplatform.portal.version>
+    <!--org.exoplatform.portal.version>3.1.6-rebased-SNAPSHOT</org.exoplatform.portal.version-->    <!-- this is the key change of this build -->
     <org.exoplatform.cs.version>2.1.2</org.exoplatform.cs.version>
     <org.exoplatform.ks.version>2.1.2</org.exoplatform.ks.version>
     <org.exoplatform.ecms.version>2.1.2</org.exoplatform.ecms.version>
@@ -73,6 +74,7 @@
     <org.gatein.wci.version>2.0.1-GA</org.gatein.wci.version>
     <org.jboss.version>2.2.9.GA</org.jboss.version>
     <org.gatein.shindig.version>1.0-r790473-Patch04</org.gatein.shindig.version>
+    <commons-httpclient.version>3.1</commons-httpclient.version>
     <org.testng.version>5.10</org.testng.version>
     <asm.version>1.5.3</asm.version>
     <org.slf4j.version>1.5.6</org.slf4j.version>
