@@ -96,6 +96,8 @@
   <javax.validation.version>1.0.0.GA</javax.validation.version>
   <hibernate-validator.version>4.0.0.GA</hibernate-validator.version>
   <!-- End wiki properties -->        
+  
+  <commons-httpclient.version>3.1</commons-httpclient.version>
     
     <!-- ***************************************************** -->
     <!-- Plugin versions (waiting for an upgrade in exo parent -->
