@@ -1866,7 +1866,7 @@
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.server.jboss.patch</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>jar</type>
 				  <outputDirectory>${project.build.directory}/jbosseap</outputDirectory>
                   <excludes>META-INF/</excludes>
@@ -1933,7 +1933,7 @@
 				<artifactItem>
 				  <groupId>org.exoplatform.platform</groupId>
 				  <artifactId>exo.platform.server.jboss.patch</artifactId>
-				  <version>${project.version}</version>
+				  <version>${org.exoplatform.platform.version}</version>
 				  <type>jar</type>
 				  <outputDirectory>${project.build.directory}/jboss</outputDirectory>
                   <excludes>META-INF/</excludes>
