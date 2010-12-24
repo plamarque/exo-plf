@@ -1154,6 +1154,13 @@
       <version>${commons-collections.version}</version>
       <type>jar</type>
     </dependency>
+    <!-- 1.1.0-SNAPSHOT-->
+    <dependency>
+      <groupId>commons-httpclient</groupId>
+      <artifactId>commons-httpclient</artifactId>
+      <version>${commons-httpclient.version}</version>
+      <type>jar</type>
+    </dependency>
     <!-- 3.2.1-->
     <dependency>
       <groupId>org.exoplatform.ws</groupId>
@@ -1298,6 +1305,13 @@
     <dependency>
       <groupId>org.gatein.shindig</groupId>
       <artifactId>shindig-social-api</artifactId>
+      <version>${org.gatein.shindig.version}</version>
+      <type>jar</type>
+    </dependency>
+    <!-- 1.1.0-SNAPSHOT-->
+    <dependency>
+      <groupId>org.gatein.shindig</groupId>
+      <artifactId>shindig-common</artifactId>
       <version>${org.gatein.shindig.version}</version>
       <type>jar</type>
     </dependency>
