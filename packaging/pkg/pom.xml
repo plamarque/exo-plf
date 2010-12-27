@@ -859,13 +859,6 @@
       <type>war</type>
     </dependency>
     <!-- 2.1.0-SNAPSHOT-->
-  <dependency>
-    <groupId>org.exoplatform.commons</groupId>
-    <artifactId>exo.platform.commons.webui.ext</artifactId>
-    <version>${org.exoplatform.commons.version}</version>
-   <scope>provided</scope>
-  </dependency>
-
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>exo-ecms-apps-resources-wcm</artifactId>
@@ -1152,13 +1145,6 @@
       <version>${commons-collections.version}</version>
       <type>jar</type>
     </dependency>
-    <!-- 1.1.0-SNAPSHOT-->
-    <dependency>
-      <groupId>commons-httpclient</groupId>
-      <artifactId>commons-httpclient</artifactId>
-      <version>${commons-httpclient.version}</version>
-      <type>jar</type>
-    </dependency>
     <!-- 3.2.1-->
     <dependency>
       <groupId>org.exoplatform.ws</groupId>
@@ -1303,13 +1289,6 @@
     <dependency>
       <groupId>org.gatein.shindig</groupId>
       <artifactId>shindig-social-api</artifactId>
-      <version>${org.gatein.shindig.version}</version>
-      <type>jar</type>
-    </dependency>
-    <!-- 1.1.0-SNAPSHOT-->
-    <dependency>
-      <groupId>org.gatein.shindig</groupId>
-      <artifactId>shindig-common</artifactId>
       <version>${org.gatein.shindig.version}</version>
       <type>jar</type>
     </dependency>
@@ -1599,12 +1578,7 @@
        <groupId>org.gatein.shindig</groupId>
        <artifactId>shindig-common</artifactId>
        <version>${org.gatein.shindig.version}</version>
-     </dependency><!-- 1.0-r790473-Patch04-->     
-     <dependency>
-       <groupId>org.exoplatform.commons</groupId>
-       <artifactId>exo.platform.commons.webui.ext</artifactId>
-       <version>${org.exoplatform.commons.version}</version>
-     </dependency><!-- 1.0.3-SNAPSHOT-->     
+     </dependency><!-- 1.0-r790473-Patch04-->
   </dependencies>
   <!-- 1.1.1-->
   <!-- 2.1.0-SNAPSHOT-->

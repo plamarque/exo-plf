@@ -24,6 +24,7 @@ function getModule(params)
    var wsrpVersion = "${org.gatein.wsrp.version}";
    var shindigVersion = "${org.shindig.version}";
    var cometVersion = "${org.exoplatform.commons.version}";
+   var webuiExtVersion = "${org.exoplatform.commons.version}";
    var coreVersion = "${org.exoplatform.core.version}";
    var gwtframeworkVersion = "${org.exoplatform.gwtframework.version}";
    var ideVersion = "${org.exoplatform.ide.version}";
@@ -46,6 +47,8 @@ function getModule(params)
 	
    // main portal container config	
    module.config =  new Project("org.exoplatform.platform", "exo.platform.extension.config", "jar", module.version);
+   
+   module.webuiExt = new Project("org.exoplatform.commons", "exo.platform.commons.webui.ext", "jar", webuiExtVersion);
    
    // platform extension
    module.extension = {};

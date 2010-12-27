@@ -44,7 +44,7 @@ function getProduct(version) {
   product.addDependencies(portal.web.portal) ;
   
   portal.starter = new Project("org.exoplatform.portal", "exo.portal.starter.war", "war", portal.version);
-  portal.starter.deployName = "starter"; // was zzstarter
+  portal.starter.deployName = "zzzstarter";
   product.addDependencies(portal.starter);  
 
     
@@ -52,6 +52,7 @@ function getProduct(version) {
 //  product.addDependencies(platform.fck);
   product.addDependencies(platform.cometd);
   product.addDependencies(platform.config); 
+  product.addDependencies(platform.webuiExt);
   product.addDependencies(platform.extension.webapp); // includes xCMIS dependencies
   product.addDependencies(platform.component.common);
   product.addDependencies(platform.office.webapp);
