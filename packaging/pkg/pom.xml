@@ -926,7 +926,7 @@
     <!-- 2.1.0-SNAPSHOT-->
     <dependency>
       <groupId>org.exoplatform.portal</groupId>
-      <artifactId>exo.portal.component.dashboard</artifactId>
+      <artifactId>exo.portal.webui.dashboard</artifactId> <!-- artifact ID changed in EPP -->
       <version>${org.exoplatform.portal.version}</version>
       <type>jar</type>
     </dependency>
@@ -1361,11 +1361,50 @@
       <type>war</type>
     </dependency>
 
+<!-- dependencies missing in the rebased build -->
+
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-core</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.scripting</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.gatein.pc</groupId><artifactId>pc-federation</artifactId><version>${org.gatein.pc.version}</version><type>jar</type></dependency><!-- 2.2.0-GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.web.controller</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-common</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.webui.framework</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.web.security</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.gatein.wci</groupId><artifactId>wci-wci</artifactId><version>${org.gatein.wci.version}</version><type>jar</type></dependency><!-- 2.0.2-GA-->
+<dependency><groupId>org.gatein.common</groupId><artifactId>common-common</artifactId><version>${org.gatein.common.version}</version><type>jar</type></dependency><!-- 2.0.3-GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.web.resources</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.webui.portlet</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.application-registry</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-cache</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.gatein.wci</groupId><artifactId>wci-tomcat</artifactId><version>${org.gatein.wci.version}</version><type>jar</type></dependency><!-- 2.0.2-GA-->
+<dependency><groupId>org.gatein.pc</groupId><artifactId>pc-portlet</artifactId><version>${org.gatein.pc.version}</version><type>jar</type></dependency><!-- 2.2.0-GA-->
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-api</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.gadgets-core</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-hibernate</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-spi</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.gatein.pc</groupId><artifactId>pc-controller</artifactId><version>${org.gatein.pc.version}</version><type>jar</type></dependency><!-- 2.2.0-GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.web.api</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.gatein.pc</groupId><artifactId>pc-mc</artifactId><version>${org.gatein.pc.version}</version><type>jar</type></dependency><!-- 2.2.0-GA-->
+<dependency><groupId>org.gatein.common</groupId><artifactId>common-logging</artifactId><version>${org.gatein.common.version}</version><type>jar</type></dependency><!-- 2.0.3-GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.common</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.gatein.pc</groupId><artifactId>pc-bridge</artifactId><version>${org.gatein.pc.version}</version><type>jar</type></dependency><!-- 2.2.0-GA-->
+
+
+
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.webui.core</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.webui.portal</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.portal</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.web.server</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.pc</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.gatein.pc</groupId><artifactId>pc-api</artifactId><version>${org.gatein.pc.version}</version><type>jar</type></dependency><!-- 2.2.0-GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.identity</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.picketlink.idm</groupId><artifactId>picketlink-idm-ldap</artifactId><version>${org.picketlink.idm.version}</version><type>jar</type></dependency><!-- 1.1.7.GA-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.resources</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+<dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.webui.eXo</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-REBASED-SNAPSHOT-->
+
 
     
   </dependencies>
-  <!-- 1.1.1-->
-  <!-- 2.1.0-SNAPSHOT-->
   <build>
     <finalName>Platform-${project.version}</finalName>
     <plugins>

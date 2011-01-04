@@ -71,8 +71,10 @@
     <org.jsecurity.version>0.9.0</org.jsecurity.version>
     <xml-apis.version>1.3.04</xml-apis.version>
     <org.chromattic.version>1.0.4</org.chromattic.version>
-    <org.gatein.pc.version>2.1.1-GA</org.gatein.pc.version>
-    <org.gatein.wci.version>2.0.1-GA</org.gatein.wci.version>
+    <org.gatein.pc.version>2.2.0-GA</org.gatein.pc.version>   <!-- upgraded from 2.1.1-GA in EPP rebased -->
+    <org.gatein.wci.version>2.0.2-GA</org.gatein.wci.version> <!-- upgraded from 2.0.1-GA in EPP rebased -->
+    <org.picketlink.idm.version>1.1.7.GA</org.picketlink.idm.version> <!-- added in EPP rebased -->
+    <org.gatein.common.version>2.0.3-GA</org.gatein.common.version>
     <org.jboss.version>2.2.9.GA</org.jboss.version>
     <org.gatein.shindig.version>1.0-r790473-Patch04</org.gatein.shindig.version>
     <commons-httpclient.version>3.1</commons-httpclient.version>
