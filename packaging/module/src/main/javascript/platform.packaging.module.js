@@ -31,7 +31,7 @@ function getModule(params)
    var xcmisVersion = "${org.xcmis.version}";
    var ecmsVersion = "${org.exoplatform.ecms.version}";
    var crashVersion = "${org.crsh.version}";
-   var platformVersion = "3.0.2";
+   var platformVersion = "${org.exoplatform.platform.version}";
  
    // fck editor required for KS & CS
    module.fck = new Project("org.exoplatform.platform", "exo.platform.web.fck", "war", platformVersion);
