@@ -1582,7 +1582,7 @@
     <dependency><groupId>org.gatein.wci</groupId><artifactId>wci-tomcat</artifactId><version>${org.gatein.wci.version}</version><type>jar</type></dependency><!-- 2.0.1-GA-->
     <dependency><groupId>org.exoplatform.core</groupId><artifactId>exo.core.component.organization.jdbc</artifactId><version>${org.exoplatform.core.version}</version><type>jar</type></dependency><!-- 2.3.6-GA-->
     <dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.resources</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-PLF-->
-    [DEBUG]   <dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.scripting</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-PLF-->
+    <dependency><groupId>org.exoplatform.portal</groupId><artifactId>exo.portal.component.scripting</artifactId><version>${org.exoplatform.portal.version}</version><type>jar</type></dependency><!-- 3.1.6-PLF-->
     
 
 
