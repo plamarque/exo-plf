@@ -30,6 +30,7 @@ function getModule(params)
    var xcmisVersion = "${org.xcmis.version}";
    var ecmsVersion = "${org.exoplatform.ecms.version}";
    var crashVersion = "${org.crsh.version}";
+   var cloudVersion = "${org.exoplatform.cloud-management.version}";
 
    // fck editor required for KS & CS
    module.fck = new Project("org.exoplatform.commons", "exo.platform.commons.fck", "war", commonsVersion);
@@ -108,8 +109,34 @@ function getModule(params)
         addDependency(new Project("org.exoplatform.ide", "exo-ide-server", "jar", ideVersion)).
         addDependency(new Project("org.apache.commons", "commons-compress", "jar", "1.0"));
    module.ide.webapp.deployName = "IDE";
+
+  // eXo Cloud
+
+   module.cloud = {};
+
+   module.cloud.webapp =                                
+       new Project("org.exoplatform.cloud-management", "cloud-management-console-gadget", "war", cloudVersion).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-multitenancy", "jar", cloudVersion)).
+          addDependency(new Project("ch.qos.logback", "logback-core", "jar", "0.9.20")).
+          addDependency(new Project("ch.qos.logback", "logback-classic", "jar", "0.9.20")).
+          addDependency(new Project("mx4j", "mx4j-tools", "jar", "3.0.1")).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-common", "jar", cloudVersion)).
+          addDependency(new Project("commons-io", "commons-io", "jar", "2.0")).
+          addDependency(new Project("commons-logging", "commons-logging", "jar", "1.1.1")).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-rest", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-instrument", "jar", cloudVersion)).
+          addDependency(new Project("asm", "asm", "jar", "3.2")).
+          addDependency(new Project("asm", "asm-commons", "jar", "3.2")).
+          addDependency(new Project("asm", "asm-util", "jar", "3.2")).
+          addDependency(new Project("asm", "asm-analysis", "jar", "3.2")).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-statistic", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-rest-groovy", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-security", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-tomcat-valve", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-ide-rest", "jar", cloudVersion));
+   module.cloud.webapp.deployName = "CloudManagerConsole"; 
    
-    // acme website
+   // acme website
    module.sample = {};
    
    module.sample.acme = {};

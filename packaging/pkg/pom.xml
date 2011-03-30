@@ -162,6 +162,12 @@
       <artifactId>exo.cs.packaging.assembly</artifactId>
       <version>${org.exoplatform.cs.version}</version>
       <type>pom</type>
+      <exclusions>
+         <exclusion>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+         </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.ks</groupId>
@@ -367,6 +373,158 @@
       <version>2.4.1</version>
       <type>jar</type>
     </dependency>
+
+    <!-- eXo Cloud -->
+      <!-- dependency>
+         <groupId>org.exoplatform.ide</groupId>
+         <artifactId>exo-ide-client-application</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>war</type>
+      </dependency>
+      <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-servlet</artifactId>
+         <version>${gwt.version}</version>
+         <scope>runtime</scope>
+      </dependency>
+      <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-user</artifactId>
+         <version>${gwt.version}</version>
+         <scope>provided</scope>
+      </dependency>
+      <dependency>
+         <groupId>com.google.code.gwt-log</groupId>
+         <artifactId>gwt-log</artifactId>
+         <version>3.0.4</version>
+      </dependency -->
+
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-multitenancy</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-common</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-rest</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-rest-groovy</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-security</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-instrument</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-statistic</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-tomcat-valve</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-rest-ide</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-management-console-gadget</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>war</type>
+      </dependency>
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-ide-rest</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>asm</groupId>
+         <artifactId>asm</artifactId>
+         <version>${asm.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>asm</groupId>
+         <artifactId>asm-commons</artifactId>
+         <version>${asm.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>asm</groupId>
+         <artifactId>asm-util</artifactId>
+         <version>${asm.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>asm</groupId>
+         <artifactId>asm-analysis</artifactId>
+         <version>${asm.version}</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-core</artifactId>
+         <version>0.9.20</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>ch.qos.logback</groupId>
+         <artifactId>logback-classic</artifactId>
+         <version>0.9.20</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>mx4j</groupId>
+         <artifactId>mx4j-tools</artifactId>
+         <version>3.0.1</version>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>commons-io</groupId>
+         <artifactId>commons-io</artifactId>
+         <version>2.0</version>
+      </dependency>
+      <dependency>
+         <groupId>commons-logging</groupId>
+         <artifactId>commons-logging</artifactId>
+         <version>1.1.1</version>
+      </dependency>
+      <!-- should be transitive as jcr-services from ECMS -->
+      <dependency>
+         <groupId>org.exoplatform</groupId>
+         <artifactId>exo-jcr-services</artifactId>
+         <version>${org.exoplatform.jcr.version}</version>
+         <type>jar</type>
+      </dependency>
+
     <!-- Crash -->
     <dependency>
       <groupId>org.crsh</groupId>

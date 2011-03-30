@@ -72,6 +72,9 @@ function getProduct(version) {
   
   /* IDE */
   product.addDependencies(platform.ide.webapp);
+
+  /* eXo Cloud */
+  product.addDependencies(platform.cloud.webapp);
   
   /* ECMS */
   product.addDependencies(workflow.web.eXoWorkflowResources);
