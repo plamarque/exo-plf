@@ -29,4 +29,6 @@
            userClassNames="org.exoplatform.services.security.jaas.UserPrincipal"
            roleClassNames="org.exoplatform.services.security.jaas.RolePrincipal"
            debug='0' cache='false'/>
+
+    <Valve className="org.exoplatform.cloud.tomcat.SetCurrentRepositoryValve" portalContainerName="portal"/>
 </Context>
