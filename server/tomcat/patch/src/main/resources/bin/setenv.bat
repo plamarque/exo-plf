@@ -17,4 +17,4 @@
 @REM 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 @REM
 
-set CLASSPATH=%CATALINA_HOME%\lib\cloud-security-1.0-Alpha08-SNAPSHOT.jar;%CATALINA_HOME%\conf\
+set CLASSPATH=%CATALINA_HOME%\lib\cloud-security-1.0-Alpha09-SNAPSHOT.jar;%CATALINA_HOME%\conf\
