@@ -16,7 +16,7 @@
    <org.exoplatform.ws.version>2.2.0-CR1-SNAPSHOT</org.exoplatform.ws.version>
    <org.exoplatform.jcr.version>1.14.0-CR1-SNAPSHOT</org.exoplatform.jcr.version>
    <org.exoplatform.jcr-services.version>1.14.0-CR1-SNAPSHOT</org.exoplatform.jcr-services.version>
-   <org.exoplatform.cloud-management.version>1.0-Alpha08-SNAPSHOT</org.exoplatform.cloud-management.version>
+   <org.exoplatform.cloud-management.version>1.0-Alpha09-SNAPSHOT</org.exoplatform.cloud-management.version>
 
    <asm.version>3.2</asm.version>
    <javax.inject.version>1</javax.inject.version>
