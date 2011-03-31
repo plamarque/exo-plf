@@ -65,6 +65,14 @@
 		    <label>#{administration.workflowAdministration}</label>
 		    <page-reference>group::/platform/administrators::workflowAdministration</page-reference>
 	    </node>
-    </node>                        
+    </node>
+
+    <!-- Cloud -->
+    <node>                                                                                                                                                                                                    
+      <uri>cmc</uri>                                                                                                                                                                                           
+      <name>cmc</name>                                                                                                                                                                                         
+      <label>CMC</label>                                                                                                                                                                                       
+      <page-reference>group::/platform/administrators::cmc</page-reference>                                                                                                                                    
+    </node>
   </page-nodes>
 </node-navigation>
