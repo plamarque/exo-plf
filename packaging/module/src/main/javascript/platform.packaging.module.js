@@ -100,7 +100,7 @@ function getModule(params)
    module.ide.smartgwt.deployName = "SmartGWT";
 
    module.ide.webapp =
-       new Project("org.exoplatform.ide", "exo-ide-client-gadget", "war", ideVersion).
+      new Project("org.exoplatform.ide", "exo-ide-client-gadget", "war", ideVersion).
         addDependency(new Project("org.exoplatform.core", "exo.core.component.script.groovy", "jar", coreVersion)).
         addDependency(module.ide.smartgwt).
         addDependency(new Project("org.exoplatform.ide", "exo-ide-extension-gadget-server", "jar", ideVersion)).
@@ -110,12 +110,12 @@ function getModule(params)
         addDependency(new Project("org.apache.commons", "commons-compress", "jar", "1.0"));
    module.ide.webapp.deployName = "IDE";
 
-  // eXo Cloud
-
+   // eXo Cloud
    module.cloud = {};
 
    module.cloud.webapp =                                
-       new Project("org.exoplatform.cloud-management", "cloud-management-console-gadget", "war", cloudVersion).
+   //    new Project("org.exoplatform.cloud-management", "cloud-management-console-gadget", "war", cloudVersion).
+       new Project("org.exoplatform.cloud-management", "cloud-management-console-application", "war", cloudVersion).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-multitenancy", "jar", cloudVersion)).
           addDependency(new Project("ch.qos.logback", "logback-core", "jar", "0.9.20")).
           addDependency(new Project("ch.qos.logback", "logback-classic", "jar", "0.9.20")).

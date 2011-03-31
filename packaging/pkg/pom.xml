@@ -235,7 +235,7 @@
     </dependency>
     <dependency>
       <groupId>org.exoplatform.ide</groupId>
-      <artifactId>exo-ide-client-gadget </artifactId>
+      <artifactId>exo-ide-client-gadget</artifactId>
       <version>${org.exoplatform.ide.version}</version>
       <type>war</type>
     </dependency>
@@ -453,9 +453,16 @@
          <version>${org.exoplatform.cloud-management.version}</version>
          <type>jar</type>
       </dependency>
-      <dependency>
+      <!-- Gadget doesn't work CM-336, use application as below temporary -->
+      <!-- dependency>
          <groupId>org.exoplatform.cloud-management</groupId>
          <artifactId>cloud-management-console-gadget</artifactId>
+         <version>${org.exoplatform.cloud-management.version}</version>
+         <type>war</type>
+      </dependency -->
+      <dependency>
+         <groupId>org.exoplatform.cloud-management</groupId>
+         <artifactId>cloud-management-console-application</artifactId>
          <version>${org.exoplatform.cloud-management.version}</version>
          <type>war</type>
       </dependency>

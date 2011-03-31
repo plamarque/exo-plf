@@ -68,11 +68,11 @@
     </node>
 
     <!-- Cloud -->
-    <node>                                                                                                                                                                                                    
-      <uri>cmc</uri>                                                                                                                                                                                           
-      <name>cmc</name>                                                                                                                                                                                         
-      <label>CMC</label>                                                                                                                                                                                       
-      <page-reference>group::/platform/administrators::cmc</page-reference>                                                                                                                                    
+    <node>
+      <uri>cloud-console</uri>
+      <name>cloud-console</name>
+      <label>Cloud Manager Console</label>
+      <page-reference>group::/platform/administrators::cloud-console</page-reference>
     </node>
   </page-nodes>
 </node-navigation>

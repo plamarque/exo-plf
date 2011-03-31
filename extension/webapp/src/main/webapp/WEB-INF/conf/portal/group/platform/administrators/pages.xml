@@ -143,8 +143,8 @@
 
   <!-- Cloud -->
   <page>                                                                                                                                                                                                      
-    <name>cmc</name>                                                                                                                                                                                           
-    <title>CMC</title>                                                                                                                                                                                         
+    <name>cloud-console</name>                                                                                                                                                                                           
+    <title>Cloud Manager Console</title>                                                                                                                                                                                         
     <access-permissions>*:/platform/administrators</access-permissions>                                                                                                                                        
     <edit-permission>*:/platform/administrators</edit-permission>                                                                                                                                              
     <portlet-application>                                                                                                                                                                                      
@@ -154,12 +154,12 @@
         <preferences>                                                                                                                                                                                          
           <preference>                                                                                                                                                                                         
             <name>url</name>                                                                                                                                                                                   
-            <value>/CMC/Application.html</value>                                                                                                                                                               
+            <value>/CloudManagerConsole/Application.html</value>                                                                                                                                                               
             <read-only>false</read-only>                                                                                                                                                                       
           </preference>                                                                                                                                                                                        
         </preferences>                                                                                                                                                                                         
       </portlet>                                                                                                                                                                                               
-      <title>CloudConsole</title>                                                                                                                                                                              
+      <title>Cloud Manager Console</title>                                                                                                                                                                              
       <access-permissions>*:/platform/administrators</access-permissions>                                                                                                                                      
       <show-info-bar>false</show-info-bar>                                                                                                                                                                     
       <show-application-state>true</show-application-state>                                                                                                                                                    
