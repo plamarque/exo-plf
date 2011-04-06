@@ -1773,6 +1773,12 @@
        <version>${org.hsqldb.version}</version>
        <type>jar</type>
      </dependency>     
+     <dependency>
+       <groupId>xpp3</groupId>
+       <artifactId>xpp3</artifactId>
+       <version>${xpp3.version}</version>
+       <type>jar</type>
+     </dependency>
 
     <!-- needed since switch to portal 3.2 -->
 <dependency><groupId>org.gatein.wci</groupId><artifactId>wci-tomcat</artifactId><version>${org.gatein.wci.version}</version><type>jar</type></dependency><!-- 2.0.2-GA-->
