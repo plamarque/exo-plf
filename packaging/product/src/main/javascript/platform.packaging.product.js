@@ -160,6 +160,7 @@ function getProduct(version) {
 
 
   /* cleanup duplicated lib */
+  product.removeDependency(new Project("org.hsqldb", "hsqldb", "jar", "2.0.0"));
   product.removeDependency(new Project("commons-httpclient", "commons-httpclient", "jar", "3.0"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.1"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.2.1"));

@@ -22,7 +22,6 @@
    <javax.inject.version>1</javax.inject.version>
    <org.javassist.version>3.14.0-GA</org.javassist.version>
    <commons-lang.version>2.6</commons-lang.version>
-   <org.hsqldb.version>2.0.0</org.hsqldb.version>
    <xpp3.version>1.1.4c</xpp3.version>
   </properties>
 
