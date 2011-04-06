@@ -375,30 +375,6 @@
     </dependency>
 
     <!-- eXo Cloud -->
-      <!-- dependency>
-         <groupId>org.exoplatform.ide</groupId>
-         <artifactId>exo-ide-client-application</artifactId>
-         <version>${org.exoplatform.cloud-management.version}</version>
-         <type>war</type>
-      </dependency>
-      <dependency>
-         <groupId>com.google.gwt</groupId>
-         <artifactId>gwt-servlet</artifactId>
-         <version>${gwt.version}</version>
-         <scope>runtime</scope>
-      </dependency>
-      <dependency>
-         <groupId>com.google.gwt</groupId>
-         <artifactId>gwt-user</artifactId>
-         <version>${gwt.version}</version>
-         <scope>provided</scope>
-      </dependency>
-      <dependency>
-         <groupId>com.google.code.gwt-log</groupId>
-         <artifactId>gwt-log</artifactId>
-         <version>3.0.4</version>
-      </dependency -->
-
       <dependency>
          <groupId>org.exoplatform.cloud-management</groupId>
          <artifactId>cloud-multitenancy</artifactId>
@@ -519,18 +495,18 @@
          <artifactId>commons-io</artifactId>
          <version>2.0</version>
       </dependency>
-      <dependency>
+      <!-- dependency>
          <groupId>commons-logging</groupId>
          <artifactId>commons-logging</artifactId>
          <version>1.1.1</version>
-      </dependency>
+      </dependency -->
       <!-- should be transitive as jcr-services from ECMS -->
-      <dependency>
+      <!-- dependency>
          <groupId>org.exoplatform</groupId>
          <artifactId>exo-jcr-services</artifactId>
          <version>${org.exoplatform.jcr.version}</version>
          <type>jar</type>
-      </dependency>
+      </dependency -->
 
     <!-- Crash -->
     <dependency>
@@ -882,13 +858,6 @@
       <type>jar</type>
     </dependency>
     
-    <!--dependency>
-      <groupId>org.fontbox</groupId>
-      <artifactId>fontbox</artifactId>
-      <version>${org.fontbox.version}</version>
-      <type>jar</type>
-    </dependency-->
-    
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>exo-ecms-apps-gadget-publication</artifactId>
@@ -1229,9 +1198,9 @@
     </dependency>
     
     <dependency>
-      <groupId>javassist</groupId>
+      <groupId>org.javassist</groupId>
       <artifactId>javassist</artifactId>
-      <version>${javassist.version}</version>
+      <version>${org.javassist.version}</version>
       <type>jar</type>
     </dependency>
     
@@ -1767,7 +1736,7 @@
       <artifactId>ecs</artifactId>
       <version>${ecs.version}</version>
     </dependency>
-<!-- end wiki dependencies -->
+    <!-- end wiki dependencies -->
     <dependency>
       <groupId>commons-httpclient</groupId>
       <artifactId>commons-httpclient</artifactId>
@@ -1778,6 +1747,19 @@
        <artifactId>shindig-common</artifactId>
        <version>${org.gatein.shindig.version}</version>
      </dependency>
+     <dependency>
+       <groupId>commons-lang</groupId>
+       <artifactId>commons-lang</artifactId>
+       <version>${commons-lang.version}</version>
+       <type>jar</type>
+     </dependency>
+     <dependency>
+       <groupId>org.hsqldb</groupId>
+       <artifactId>hsqldb</artifactId>
+       <version>${org.hsqldb.version}</version>
+       <type>jar</type>
+     </dependency>     
+
     <!-- needed since switch to portal 3.2 -->
 <dependency><groupId>org.gatein.wci</groupId><artifactId>wci-tomcat</artifactId><version>${org.gatein.wci.version}</version><type>jar</type></dependency><!-- 2.0.2-GA-->
 <dependency><groupId>org.exoplatform.core</groupId><artifactId>exo.core.component.organization.jdbc</artifactId><version>${org.exoplatform.core.version}</version><type>jar</type></dependency>
