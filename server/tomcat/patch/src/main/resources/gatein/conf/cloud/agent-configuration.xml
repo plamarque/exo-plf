@@ -244,7 +244,7 @@
          <advices>
             <advice class-name="org.exoplatform.instrument.transformer.LimitedRestResourceAdvice">
                <parameters>
-                  <parameter value="60" name="rest-resource-limit" />
+                  <parameter value="70" name="rest-resource-limit" />
                </parameters>
             </advice>
          </advices>
