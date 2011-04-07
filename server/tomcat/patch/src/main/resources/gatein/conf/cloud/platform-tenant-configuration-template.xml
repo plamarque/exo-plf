@@ -477,22 +477,22 @@
                   </persister>
                </lock-manager>
             </workspace>
-        
-            <!-- CS -->
-            <workspace name="collaboration">
+
+	    <!-- SOCIAL  -->
+            <workspace name="social">
                <container class="org.exoplatform.services.jcr.impl.storage.jdbc.optimisation.CQJDBCWorkspaceDataContainer">
                   <properties>
                      <property name="source-name" value="${tenant.repository.name}" />
-                     <property name="dialect" value="${gatein.jcr.datasource.dialect}" />
+                     <property name="dialect" value="auto" />
                      <property name="multi-db" value="false" />
                      <property name="update-storage" value="true" />
                      <property name="max-buffer-size" value="200k" />
-                     <property name="swap-directory" value="${gatein.jcr.data.dir}/swap/${tenant.repository.name}/collaboration${container.name.suffix}" />
+                     <property name="swap-directory" value="${gatein.jcr.data.dir}/swap/${tenant.repository.name}/social${container.name.suffix}" />
                   </properties>
                   <value-storages>
-                     <value-storage id="collaboration" class="org.exoplatform.services.jcr.impl.storage.value.fs.TreeFileValueStorage">
+                     <value-storage id="social" class="org.exoplatform.services.jcr.impl.storage.value.fs.TreeFileValueStorage">
                         <properties>
-                           <property name="path" value="${gatein.jcr.storage.data.dir}/${tenant.repository.name}/collaboration${container.name.suffix}" />
+                           <property name="path" value="${gatein.jcr.storage.data.dir}/${tenant.repository.name}/social${container.name.suffix}" />
                         </properties>
                         <filters>
                            <filter property-type="Binary" />
@@ -515,14 +515,14 @@
                </cache>
                <query-handler class="org.exoplatform.services.jcr.impl.core.query.lucene.SearchIndex">
                   <properties>
-                     <property name="index-dir" value="${gatein.jcr.index.data.dir}/${tenant.repository.name}/collaboration${container.name.suffix}" />
+                     <property name="index-dir" value="${gatein.jcr.index.data.dir}/${tenant.repository.name}/social${container.name.suffix}" />
                   </properties>
                </query-handler>
                <lock-manager>
                   <time-out>15m</time-out>
                   <persister class="org.exoplatform.services.jcr.impl.core.lock.FileSystemLockPersister">
                      <properties>
-                        <property name="path" value="${gatein.jcr.data.dir}/lock/${tenant.repository.name}/collaboration${container.name.suffix}" />
+                        <property name="path" value="${gatein.jcr.data.dir}/lock/${tenant.repository.name}/social${container.name.suffix}" />
                      </properties>
                   </persister>
                </lock-manager>
@@ -575,56 +575,6 @@
                   <persister class="org.exoplatform.services.jcr.impl.core.lock.FileSystemLockPersister">
                      <properties>
                         <property name="path" value="${gatein.jcr.data.dir}/lock/${tenant.repository.name}/knowledge${container.name.suffix}" />
-                     </properties>
-                  </persister>
-               </lock-manager>
-            </workspace>
-
-            <!-- SOCIAL  -->
-            <workspace name="social">
-               <container class="org.exoplatform.services.jcr.impl.storage.jdbc.optimisation.CQJDBCWorkspaceDataContainer">
-                  <properties>
-                     <property name="source-name" value="${tenant.repository.name}" />
-                     <property name="dialect" value="auto" />
-                     <property name="multi-db" value="false" />
-                     <property name="update-storage" value="true" />
-                     <property name="max-buffer-size" value="200k" />
-                     <property name="swap-directory" value="${gatein.jcr.data.dir}/swap/${tenant.repository.name}/social${container.name.suffix}" />
-                  </properties>
-                  <value-storages>
-                     <value-storage id="social" class="org.exoplatform.services.jcr.impl.storage.value.fs.TreeFileValueStorage">
-                        <properties>
-                           <property name="path" value="${gatein.jcr.storage.data.dir}/${tenant.repository.name}/social${container.name.suffix}" />
-                        </properties>
-                        <filters>
-                           <filter property-type="Binary" />
-                        </filters>
-                     </value-storage>
-                  </value-storages>
-               </container>
-               <initializer class="org.exoplatform.services.jcr.impl.core.ScratchWorkspaceInitializer">
-                  <properties>
-                     <property name="root-nodetype" value="nt:unstructured" />
-                     <property name="root-permissions"
-                        value="any read;*:/platform/administrators read;*:/platform/administrators add_node;*:/platform/administrators set_property;*:/platform/administrators remove" />
-                  </properties>
-               </initializer>
-               <cache enabled="true" class="org.exoplatform.services.jcr.impl.dataflow.persistent.LinkedWorkspaceStorageCacheImpl">
-                  <properties>
-                     <property name="max-size" value="200k" />
-                     <property name="live-time" value="2h" />
-                  </properties>
-               </cache>
-               <query-handler class="org.exoplatform.services.jcr.impl.core.query.lucene.SearchIndex">
-                  <properties>
-                     <property name="index-dir" value="${gatein.jcr.index.data.dir}/${tenant.repository.name}/social${container.name.suffix}" />
-                  </properties>
-               </query-handler>
-               <lock-manager>
-                  <time-out>15m</time-out>
-                  <persister class="org.exoplatform.services.jcr.impl.core.lock.FileSystemLockPersister">
-                     <properties>
-                        <property name="path" value="${gatein.jcr.data.dir}/lock/${tenant.repository.name}/social${container.name.suffix}" />
                      </properties>
                   </persister>
                </lock-manager>
