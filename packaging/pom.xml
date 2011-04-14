@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.exoplatform.platform</groupId>
-    <artifactId>exo.platform.parent</artifactId>
-    <version>3.5.0-M2-SNAPSHOT</version>
+    <artifactId>exo.platform.parent-cloud</artifactId>
+    <version>3.5.0-M2-CLOUD-SNAPSHOT</version>
   </parent>
   <artifactId>exo.platform.packaging</artifactId>
   <packaging>pom</packaging>
@@ -17,6 +17,7 @@
    <org.exoplatform.jcr.version>1.14.0-CR2-SNAPSHOT</org.exoplatform.jcr.version>
    <org.exoplatform.jcr-services.version>1.14.0-CR2-SNAPSHOT</org.exoplatform.jcr-services.version>
    <org.exoplatform.cloud-management.version>1.0-Alpha09-SNAPSHOT</org.exoplatform.cloud-management.version>
+   <org.exoplatform.platform.version>3.5.0-M2-SNAPSHOT</org.exoplatform.platform.version>
 
    <asm.version>3.2</asm.version>
    <javax.inject.version>1</javax.inject.version>

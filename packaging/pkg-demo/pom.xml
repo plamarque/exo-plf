@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.exoplatform.platform</groupId>
     <artifactId>exo.platform.packaging</artifactId>
-    <version>3.5.0-M2-SNAPSHOT</version>
+    <version>3.5.0-M2-CLOUD-SNAPSHOT</version>
   </parent>
   <artifactId>exo.platform.packaging.demo</artifactId>
   <packaging>pom</packaging>
@@ -18,14 +18,14 @@
     <dependency>
 		<groupId>org.exoplatform.platform</groupId>
 		<artifactId>exo.platform.packaging.assembly</artifactId>
-		<version>${project.version}</version>
+		<version>${org.exoplatform.platform.version}</version>
         <type>zip</type>
         <classifier>tomcat</classifier>
     </dependency>
   </dependencies>
 
   <build>
-    <finalName>Platform-${project.version}-Demo</finalName>
+    <finalName>Platform-${org.exoplatform.platform.version}-Demo</finalName>
     <plugins>
 <!-- Unpack Tomcat base -->
        <plugin>
@@ -46,7 +46,7 @@
 				  <artifactId>exo.platform.packaging.assembly</artifactId>
 				  <classifier>tomcat</classifier>
 				  <type>zip</type>
-                  <version>${project.version}</version>
+                  <version>${org.exoplatform.platform.version}</version>
                   <outputDirectory>target/tomcat-demo</outputDirectory>
                 </artifactItem>
               </artifactItems>

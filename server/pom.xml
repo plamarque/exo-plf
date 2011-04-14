@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.exoplatform.platform</groupId>
-    <artifactId>exo.platform.parent</artifactId>
-    <version>3.5.0-M2-SNAPSHOT</version>
+    <artifactId>exo.platform.parent-cloud</artifactId>
+    <version>3.5.0-M2-CLOUD-SNAPSHOT</version>
   </parent>
   <artifactId>exo.platform.server</artifactId>
   <packaging>pom</packaging>
