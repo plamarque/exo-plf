@@ -20,7 +20,7 @@
    <org.exoplatform.jcr.version>1.14.0-CR2-SNAPSHOT</org.exoplatform.jcr.version>
    <org.exoplatform.jcr-services.version>1.14.0-CR2-SNAPSHOT</org.exoplatform.jcr-services.version>
    <org.exoplatform.cloud-management.version>1.0-Alpha09-SNAPSHOT</org.exoplatform.cloud-management.version>
-   <org.exoplatform.ecms.version>2.2.0-Beta3-SNAPHSOT</org.exoplatform.ecms.version>
+   <org.exoplatform.ecms.version>2.2.0-Beta3-CLOUD-SNAPHSOT</org.exoplatform.ecms.version>
    <org.exoplatform.platform.version>3.5.0-M2</org.exoplatform.platform.version>
 
    <asm.version>3.2</asm.version>
