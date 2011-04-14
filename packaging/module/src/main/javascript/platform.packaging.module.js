@@ -31,6 +31,7 @@ function getModule(params)
    var ecmsVersion = "${org.exoplatform.ecms.version}";
    var crashVersion = "${org.crsh.version}";
    var cloudVersion = "${org.exoplatform.cloud-management.version}";
+   var platformVersion = "${org.exoplatform.platform.version}";
 
    // fck editor required for KS & CS
    module.fck = new Project("org.exoplatform.commons", "exo.platform.commons.fck", "war", commonsVersion);
@@ -45,15 +46,15 @@ function getModule(params)
    module.cometd.deployName = "cometd";
 	
    // main portal container config	
-   module.config =  new Project("org.exoplatform.platform", "exo.platform.extension.config", "jar", module.version);
+   module.config =  new Project("org.exoplatform.platform", "exo.platform.extension.config", "jar", platformVersion);
    
    // platform extension
    module.extension = {};
    module.extension.webapp = 
       new Project("org.exoplatform.platform", "exo.platform.extension.webapp", "war", module.version).
-      addDependency(new Project("org.exoplatform.platform", "exo.platform.component.webui", "jar", module.version)).
-      addDependency(new Project("org.exoplatform.platform", "exo.platform.component.gadgets", "jar", module.version)).
-      addDependency(new Project("org.exoplatform.platform", "exo.platform.upgrade.plugins", "jar", module.version)).
+      addDependency(new Project("org.exoplatform.platform", "exo.platform.component.webui", "jar", platformVersion)).
+      addDependency(new Project("org.exoplatform.platform", "exo.platform.component.gadgets", "jar", platformVersion)).
+      addDependency(new Project("org.exoplatform.platform", "exo.platform.upgrade.plugins", "jar", platformVersion)).
       // xCMIS dependencies
       addDependency(new Project("org.xcmis", "xcmis-renditions", "jar", xcmisVersion)).
       addDependency(new Project("org.xcmis", "xcmis-restatom", "jar", xcmisVersion)).
@@ -72,20 +73,20 @@ function getModule(params)
       addDependency(new Project("org.apache.ws.commons.axiom", "axiom-impl", "jar", "1.2.5")).
       addDependency(new Project("jaxen", "jaxen", "jar", "1.1.1")).
       addDependency(new Project("org.apache.lucene", "lucene-regex", "jar", "2.4.1"));
-   /*module.extension.config =  new Project("org.exoplatform.platform", "exo.platform.extension.config", "jar", module.version);*/
+
    module.extension.webapp.deployName = "platform-extension";
    module.extension.resources = 
-      new Project("org.exoplatform.platform", "exo.platform.extension.resources", "war", module.version);
+      new Project("org.exoplatform.platform", "exo.platform.extension.resources", "war", platformVersion);
    module.extension.resources.deployName = "eXoPlatformResources";
    
    
    module.extension.portlets = {};
-   module.extension.portlets.platformNavigation =  new Project("org.exoplatform.platform", "exo.platform.extension.portlets.platformNavigation", "war", module.version);
+   module.extension.portlets.platformNavigation =  new Project("org.exoplatform.platform", "exo.platform.extension.portlets.platformNavigation", "war", platformVersion);
 
 
    // platform commons
    module.component = {};
-   module.component.common = new Project("org.exoplatform.platform", "exo.platform.component.common", "jar", module.version).
+   module.component.common = new Project("org.exoplatform.platform", "exo.platform.component.common", "jar", platformVersion).
    addDependency(new Project("org.exoplatform.commons", "exo.platform.commons.component.product", "jar", commonsVersion));
       
    
@@ -142,27 +143,27 @@ function getModule(params)
    
    module.sample.acme = {};
    
-   module.sample.acme.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.webapp", "war", module.version).
-	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.component.file-explorer", "jar", module.version)).
-	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.component.navigation-rest", "jar", module.version)).
-	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.config", "jar", module.version));
+   module.sample.acme.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.webapp", "war", platformVersion).
+	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.component.file-explorer", "jar", platformVersion)).
+	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.component.navigation-rest", "jar", platformVersion)).
+	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.config", "jar", platformVersion));
    module.sample.acme.webapp.deployName = "acme-website";
    
-   module.sample.acme.resources =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.resources", "war", module.version);
+   module.sample.acme.resources =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-website.resources", "war", platformVersion);
    module.sample.acme.resources.deployName = "acme-websiteResources";
    
    // acme social intranet
    module.sample.acmeIntranet = {};
    
-   module.sample.acmeIntranet.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.webapp", "war", module.version).
-	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.config", "jar", module.version));
+   module.sample.acmeIntranet.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.webapp", "war", platformVersion).
+	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.config", "jar", platformVersion));
    module.sample.acmeIntranet.webapp.deployName = "acme-intranet";
    
     // default website
    module.sample.defaultWebsite = {};
    
-   module.sample.defaultWebsite.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.default-website.webapp", "war", module.version).
-	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.default-website.config", "jar", module.version));
+   module.sample.defaultWebsite.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.default-website.webapp", "war", platformVersion).
+	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.default-website.config", "jar", platformVersion));
    module.sample.defaultWebsite.webapp.deployName = "default-website";
    
     // Crash
