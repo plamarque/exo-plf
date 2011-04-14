@@ -6,11 +6,10 @@
     <artifactId>exo.platform.parent-cloud</artifactId>
     <version>3.5.0-M2-CLOUD-SNAPSHOT</version>
   </parent>
-  <artifactId>exo.platform.server</artifactId>
+  <artifactId>exo.platform.extension</artifactId>
   <packaging>pom</packaging>
-  <name>eXo Platform Cloud - Server</name>
+  <name>eXo Platform Cloud - Extension</name>
   <modules>
-    <module>tomcat</module>
-    <module>jboss</module>
+    <module>webapp</module>
   </modules>
 </project>

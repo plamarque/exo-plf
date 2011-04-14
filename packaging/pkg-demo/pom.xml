@@ -8,7 +8,7 @@
   </parent>
   <artifactId>exo.platform.packaging.demo</artifactId>
   <packaging>pom</packaging>
-  <name>eXo Platform - Packaging Demo</name>
+  <name>eXo Platform Cloud - Packaging Demo</name>
  
 <profiles>
  <profile>

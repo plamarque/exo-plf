@@ -8,7 +8,7 @@
   </parent>
   <artifactId>exo.platform.packaging.assembly</artifactId>
   <packaging>pom</packaging>
-  <name>eXo Platform - Packaging Assembly</name>
+  <name>eXo Platform Cloud - Packaging Assembly</name>
   <dependencies>
     <dependency>
       <groupId>org.exoplatform.tool</groupId>
@@ -50,19 +50,19 @@
     <dependency>
        <groupId>org.exoplatform.platform</groupId>
        <artifactId>exo.platform.server.tomcat.patch</artifactId>
-       <version>${org.exoplatform.platform.version}</version>
+       <version>${project.version}</version>
        <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>platform.packaging.module</artifactId>
-      <version>${org.exoplatform.platform.version}</version>
+      <version>${project.version}</version>
       <type>js</type>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
       <artifactId>platform.packaging.product</artifactId>
-      <version>${org.exoplatform.platform.version}</version>
+      <version>${project.version}</version>
       <type>js</type>
     </dependency>
     <!-- KS -->

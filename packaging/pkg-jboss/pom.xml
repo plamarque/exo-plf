@@ -8,7 +8,7 @@
   </parent>
   <artifactId>exo.platform.packaging.jboss</artifactId>
   <packaging>pom</packaging>
-  <name>eXo Platform - Packaging JBoss</name>
+  <name>eXo Platform Cloud - Packaging JBoss</name>
 
 <profiles>
   <profile>

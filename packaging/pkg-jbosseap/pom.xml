@@ -8,7 +8,7 @@
   </parent>
   <artifactId>exo.platform.packaging.jbosseap</artifactId>
   <packaging>pom</packaging>
-  <name>eXo Platform - Packaging JBossEAP EARs</name>
+  <name>eXo Platform Cloud - Packaging JBossEAP EARs</name>
 
 <profiles>
     <profile>

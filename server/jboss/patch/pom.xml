@@ -8,7 +8,7 @@
   </parent>
   <artifactId>exo.platform.server.jboss.patch</artifactId>
   <packaging>jar</packaging>
-  <name>eXo Platform - JBoss Server Patch</name>
+  <name>eXo Platform Cloud - JBoss Server Patch</name>
   <url>http://www.exoplatform.org</url>
   <dependencies />
   

@@ -8,7 +8,7 @@
   </parent>
   <artifactId>exo.platform.packaging.trial</artifactId>
   <packaging>pom</packaging>
-  <name>eXo Platform - Packaging Trial</name>
+  <name>eXo Platform Cloud - Packaging Trial</name>
 
 <profiles>
   <profile>
