@@ -165,8 +165,6 @@ function getProduct(version) {
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.1"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.2.1"));
   product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4"));
-  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4.2"));
-  product.removeDependency(new Project("org.apache.pdfbox", "fontbox", "jar", "1.1.0"));
   product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.6"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "2.1"));
   product.removeDependency(new Project("commons-digester", "commons-digester", "jar", "1.6"));
@@ -187,6 +185,11 @@ function getProduct(version) {
 //  product.addDependencies(new Project("commons-digester", "commons-digester", "jar", "1.7"));
   product.addDependencies(new Project("commons-httpclient", "commons-httpclient", "jar", "3.1"));
   product.addDependencies(new Project("findbugs", "annotations", "jar", "1.0.0"));
+
+  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4.2"));
+  product.removeDependency(new Project("org.apache.pdfbox", "fontbox", "jar", "1.1.0"));
+  product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-core-parser", "jar",  "2.2.0-Beta2"));
+  product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-core-webui", "jar", "2.2.0-Beta2"));
 
   product.module = portal ;
   product.dependencyModule = [kernel, core, ws, eXoJcr, cs, ks, social, workflow, dms, wcm];
