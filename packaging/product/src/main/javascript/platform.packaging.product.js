@@ -186,8 +186,6 @@ function getProduct(version) {
   product.addDependencies(new Project("commons-httpclient", "commons-httpclient", "jar", "3.1"));
   product.addDependencies(new Project("findbugs", "annotations", "jar", "1.0.0"));
 
-  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4.2"));
-  product.removeDependency(new Project("org.apache.pdfbox", "fontbox", "jar", "1.1.0"));
   product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-core-parser", "jar",  "2.2.0-Beta2"));
   product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-core-webui", "jar", "2.2.0-Beta2"));
 
@@ -200,6 +198,9 @@ function getProduct(version) {
 	  product.addDependencies(new Project("commons-logging", "commons-logging", "jar", "1.1.1"));
   }
 
+  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4.2"));
+  product.removeDependency(new Project("org.apache.pdfbox", "fontbox", "jar", "1.1.0"));
+  product.removeDependency(new Project("org.exoplatform.commons", "exo.platform.commons.webui.ext", "jar", "1.1.0-Beta01"));  
 
   return product ;
 }
