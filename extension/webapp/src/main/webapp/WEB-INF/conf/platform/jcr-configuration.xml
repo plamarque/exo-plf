@@ -24,11 +24,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.exoplaform.org/xml/ns/kernel_1_0.xsd http://www.exoplaform.org/xml/ns/kernel_1_0.xsd"
   xmlns="http://www.exoplaform.org/xml/ns/kernel_1_0.xsd">
-
-   <component>
+   <!-- Is needed for JCR 1.14.0-CR2 after revision 4223 -->
+   <!--component>
       <key>org.exoplatform.services.jcr.ext.distribution.DataDistributionManager</key>
       <type>org.exoplatform.services.jcr.ext.distribution.impl.DataDistributionManagerImpl</type>
-   </component>
+   </component-->
 
   <external-component-plugins>
     <target-component>org.exoplatform.services.jcr.config.RepositoryServiceConfiguration</target-component>
