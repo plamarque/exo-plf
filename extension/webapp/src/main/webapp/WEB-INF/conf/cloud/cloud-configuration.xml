@@ -379,7 +379,7 @@
           <name>ref-addresses</name>
           <description>ref-addresses</description>
           <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-          <property name="url" value="jdbc:hsqldb:file:${tenant.jcr.data.dir}/hsqldb/${tenant.repository.name}/idm${container.name.suffix}" />
+          <property name="url" value="jdbc:hsqldb:file:${tenant.jcr.data.dir}/../idm/exo_idm_portal" />
           <property name="username" value="sa" />
           <property name="password" value="" />
         </properties-param>
