@@ -18,29 +18,33 @@
 # 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 #
 
+#Production Script to launch GateIn
+#See gatein-dev.sh for development starup
+
 # Computes the absolute path of eXo
 cd `dirname "$0"`
 
 # Sets some variables
 LOG_OPTS="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog"
 SECURITY_OPTS="-Djava.security.auth.login.config=../conf/jaas.conf"
-EXO_OPTS="-Dexo.product.developing=true -Dexo.conf.dir.name=gatein/conf"
-EXO_CONFIG_OPTS="-Xms256m -Xmx1024m -XX:MaxPermSize=256m -Dorg.exoplatform.container.configuration.debug"
-EXO_PROFILES="-Dexo.profiles=default"
-JPDA_TRANSPORT=dt_socket
-JPDA_ADDRESS=8000
+EXO_OPTS="-Dexo.product.developing=false -Dexo.conf.dir.name=gatein/conf"
 
+JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=6969 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+EXO_OPTS="-Dexo.product.developing=false -Dexo.conf.dir.name=gatein/conf"
+EXO_CLOUD_OPTS="-javaagent:../lib/cloud-instrument-1.0-Alpha09.jar=../gatein/conf/cloud/agent-configuration.xml \
+		-Dtenant.masterhost=localhost \
+		-Dtenant.repository.name=repository \
+		-Dtenant.jcr.data.dir=../gatein/data/jcr"
+EXO_CLOUD_SECURITY_OPTS="-Djava.security.manager=org.exoplatform.cloudmanagement.security.TenantSecurityManager -Djava.security.policy==../conf/catalina.policy"
+
+# Remote debug configuration
 REMOTE_DEBUG="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
 
-JMX_AGENT="-Dcom.sun.management.jmxremote"
+if [ "$EXO_PROFILES" = "" ] ; then 
+	EXO_PROFILES="-Dexo.profiles=default,cloud"
+fi
 
-#For profiling
-#LD_LIBRARY_PATH="/cygdrive/d/tools/YourKit/bin/win32/"
-#PATH="$PATH:$LD_LIBRARY_PATH"
-#export LD_LIBRARY_PATH
-#YOURKIT_PROFILE_OPTION="-agentlib:yjpagent  -Djava.awt.headless=true"
-
-JAVA_OPTS="$YOURKIT_PROFILE_OPTION $JAVA_OPTS $LOG_OPTS $SECURITY_OPTS $EXO_OPTS $EXO_CONFIG_OPTS $REMOTE_DEBUG $EXO_PROFILES"
+JAVA_OPTS="-Xms512m -Xmx2g -XX:MaxPermSize=256m $JAVA_OPTS $LOG_OPTS $SECURITY_OPTS $EXO_OPTS $EXO_PROFILES $EXO_CLOUD_SECURITY_OPTS $EXO_CLOUD_OPTS $JMX_OPTS $REMOTE_DEBUG"
 export JAVA_OPTS
 
 # Launches the server
