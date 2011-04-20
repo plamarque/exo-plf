@@ -275,7 +275,7 @@
       <properties-param>
         <name>db-creation</name>
         <description>database creation properties</description>
-        <property name="scriptPath" value="../${exo.conf.dir.name}/cloud/hsql/hsqldb-schema.sql" />
+        <property name="scriptPath" value="../${exo.conf.dir.name}/cloud/databases/hsqldb-schema.sql" />
         <property name="username" value="sa" />
         <property name="password" value="" />
       </properties-param>
