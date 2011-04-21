@@ -1858,6 +1858,11 @@
       <version>${org.exoplatform.platform.version}</version>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.13</version>
+    </dependency>
   </dependencies>
 
   <build>

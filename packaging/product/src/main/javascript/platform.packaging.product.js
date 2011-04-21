@@ -157,7 +157,8 @@ function getProduct(version) {
 //  product.addServerPatch("jonas",  portal.server.jonas.patch) ;
 //  product.addServerPatch("ear",  portal.server.websphere.patch) ;
 
-
+  /* add dependency for using MySQL */
+  product.addDependencies(new Project("mysql","mysql-connector-java","jar","5.1.13"))
 
   /* cleanup duplicated lib */
   product.removeDependency(new Project("org.hsqldb", "hsqldb", "jar", "2.0.0"));

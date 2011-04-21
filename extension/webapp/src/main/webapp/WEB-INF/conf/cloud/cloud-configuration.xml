@@ -259,7 +259,7 @@
   </component>
 
   <!-- JCR Dependencies END -->
-
+  <!-- HSQL Configuration -->
   <component>
     <key>org.exoplatform.services.database.creator.DBCreator</key>
     <type>org.exoplatform.services.database.creator.DBCreator</type>
@@ -281,6 +281,33 @@
       </properties-param>
     </init-params>
   </component>
+
+  <!-- MySQL configuration -->
+  <!--
+  <component>
+     <key>org.exoplatform.services.database.creator.DBCreator</key>
+     <type>org.exoplatform.services.database.creator.DBCreator</type>
+      <init-params>
+        <properties-param>
+           <name>db-connection</name>
+           <description>database connection properties</description>
+           <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+           <property name="url" value="jdbc:mysql://localhost:3306/"/>
+           <property name="username" value="root"/>
+           <property name="password" value="root"/>
+           <property name="validationQuery" value="select 1"/>
+           <property name="testOnReturn" value="true"/>
+        </properties-param>
+        <properties-param>
+           <name>db-creation</name>
+           <description>database creation properties</description>
+           <property name="scriptPath" value="../${exo.conf.dir.name}/cloud/databases/mysqldb-schema.sql"/>
+           <property name="username" value="root"/>
+           <property name="password" value="root"/>
+        </properties-param>
+     </init-params>
+  </component>
+  -->
 
   <!-- Backup service -->
   <component>
@@ -328,7 +355,8 @@
       </value-param>
     </init-params>
   </component>
-
+  
+  <!-- HSQL Configuration -->
   <external-component-plugins>
     <target-component>org.exoplatform.services.naming.InitialContextInitializer</target-component>
     <component-plugin>
@@ -386,5 +414,70 @@
       </init-params>
     </component-plugin>
   </external-component-plugins>
+
+  <!-- MySQL Configuration -->
+  <!--
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.naming.InitialContextInitializer</target-component>
+    <component-plugin>
+      <name>bind.datasource</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.services.naming.BindReferencePlugin</type>
+      <init-params>
+        <value-param>
+          <name>bind-name</name>
+          <value>${tenant.repository.name}</value>
+        </value-param>
+        <value-param>
+          <name>class-name</name>
+          <value>javax.sql.DataSource</value>
+        </value-param>
+        <value-param>
+          <name>factory</name>
+          <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+        </value-param>
+        <properties-param>
+          <name>ref-addresses</name>
+          <description>ref-addresses</description>
+            <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/${tenant.repository.name}"/>
+            <property name="username" value="root"/>
+            <property name="password" value="root"/>
+            <property name="validationQuery" value="select 1"/>
+            <property name="testOnReturn" value="true"/>
+        </properties-param>
+      </init-params>
+    </component-plugin>
+    <component-plugin>
+      <name>bind.datasource</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.services.naming.BindReferencePlugin</type>
+      <init-params>
+        <value-param>
+          <name>bind-name</name>
+          <value>exo-idm_portal</value>
+        </value-param>
+        <value-param>
+          <name>class-name</name>
+          <value>javax.sql.DataSource</value>
+        </value-param>
+        <value-param>
+          <name>factory</name>
+          <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+        </value-param>
+        <properties-param>
+          <name>ref-addresses</name>
+          <description>ref-addresses</description>
+            <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+            <property name="url" value="jdbc:mysql://localhost:3306/exo_idm_portal"/>
+            <property name="username" value="root"/>
+            <property name="password" value="root"/>
+            <property name="validationQuery" value="select 1"/>
+            <property name="testOnReturn" value="true"/>
+        </properties-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+  -->
 
 </configuration>
