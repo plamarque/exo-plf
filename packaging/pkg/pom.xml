@@ -409,6 +409,12 @@
       <version>2.4.1</version>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>2.9.4</version>
+      <type>jar</type>
+    </dependency>
 
     <!-- eXo Cloud -->
     <dependency>
