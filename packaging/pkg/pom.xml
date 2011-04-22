@@ -149,12 +149,12 @@
       <artifactId>exo-ecms-delivery-wcm-assembly</artifactId>
       <version>${org.exoplatform.ecms.version}</version>
       <type>pom</type>
-      <exclusions>
+      <!--exclusions>
         <exclusion>
           <groupId>javax.mail</groupId>
           <artifactId>mail</artifactId>
         </exclusion>
-      </exclusions>
+      </exclusions-->
     </dependency>
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>
@@ -173,14 +173,14 @@
           <groupId>commons-io</groupId>
           <artifactId>commons-io</artifactId>
         </exclusion>
-        <exclusion>
+        <!--exclusion>
           <groupId>org.apache.pdfbox</groupId>
           <artifactId>fontbox</artifactId>
-        </exclusion>
-        <exclusion>
+        </exclusion-->
+        <!--exclusion>
           <groupId>javax.mail</groupId>
           <artifactId>mail</artifactId>
-        </exclusion>
+        </exclusion-->
       </exclusions>
     </dependency>
     <dependency>
@@ -189,14 +189,14 @@
       <version>${org.exoplatform.ks.version}</version>
       <type>pom</type>
       <exclusions>
-        <exclusion>
+        <!--exclusion>
           <groupId>org.apache.pdfbox</groupId>
           <artifactId>fontbox</artifactId>
-        </exclusion>
-        <exclusion>
+        </exclusion-->
+        <!--exclusion>
           <groupId>javax.mail</groupId>
           <artifactId>mail</artifactId>
-        </exclusion>
+        </exclusion-->
       </exclusions>
     </dependency>
     <dependency>
@@ -300,12 +300,12 @@
       <artifactId>xcmis-renditions</artifactId>
       <version>${org.xcmis.version}</version>
       <type>jar</type>
-      <exclusions>
+      <!--exclusions>
         <exclusion>
           <groupId>org.apache.pdfbox</groupId>
           <artifactId>pdfbox</artifactId>
         </exclusion>
-      </exclusions>
+      </exclusions-->
     </dependency>
     <dependency>
       <groupId>org.xcmis</groupId>
@@ -342,12 +342,12 @@
       <artifactId>exo-ecms-ext-xcmis-sp</artifactId>
       <version>${org.exoplatform.ecms.version}</version>
       <type>jar</type>
-      <exclusions>
+      <!--exclusions>
         <exclusion>
           <groupId>org.apache.pdfbox</groupId>
           <artifactId>pdfbox</artifactId>
         </exclusion>
-      </exclusions>
+      </exclusions-->
     </dependency>
     <dependency>
       <groupId>org.apache.abdera</groupId>
