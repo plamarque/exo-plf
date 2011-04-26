@@ -104,6 +104,12 @@
       <version>${org.exoplatform.social.version}</version>
       <type>js</type>
     </dependency>
+    <dependency>
+      <groupId>org.gatein.shindig</groupId>
+      <artifactId>shindig-gadgets</artifactId>
+      <version>${org.gatein.shindig.version}</version>
+    </dependency>
+
     <!-- ECMS -->
     <dependency>
       <groupId>org.exoplatform.ecms</groupId>

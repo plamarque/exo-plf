@@ -24,17 +24,6 @@
     <org.exoplatform.platform.version>3.5.0-M3-SNAPSHOT</org.exoplatform.platform.version>
 
     <asm.version>3.2</asm.version>
-    <javax.inject.version>1</javax.inject.version>
-    <org.javassist.version>3.14.0-GA</org.javassist.version>
-    <commons-lang.version>2.6</commons-lang.version>
-    <xpp3.version>1.1.4c</xpp3.version>
-    <commons-collections.version>3.2.1</commons-collections.version>
-    <commons-beanutils.version>1.8.3</commons-beanutils.version>
-    <commons-codec.version>1.3</commons-codec.version>
-    <commons-pool.version>1.5.5</commons-pool.version>
-    <commons-dbcp.version>1.4</commons-dbcp.version>
-    <antlr.version>2.7.6rc1</antlr.version>
-    <org.jcrom.version>1.2</org.jcrom.version>
   </properties>
 
   <modules>
