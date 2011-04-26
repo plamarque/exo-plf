@@ -55,6 +55,7 @@ function getModule(params)
       addDependency(new Project("org.exoplatform.platform", "exo.platform.component.webui", "jar", platformVersion)).
       addDependency(new Project("org.exoplatform.platform", "exo.platform.component.gadgets", "jar", platformVersion)).
       addDependency(new Project("org.exoplatform.platform", "exo.platform.upgrade.plugins", "jar", platformVersion)).
+      addDependency(new Project("org.exoplatform.platform", "exo.platform.component.organization", "jar", platformVersion)).
       // xCMIS dependencies
       addDependency(new Project("org.xcmis", "xcmis-renditions", "jar", xcmisVersion)).
       addDependency(new Project("org.xcmis", "xcmis-restatom", "jar", xcmisVersion)).
@@ -159,6 +160,9 @@ function getModule(params)
    module.sample.acmeIntranet.webapp =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.webapp", "war", platformVersion).
 	   addDependency(new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.config", "jar", platformVersion));
    module.sample.acmeIntranet.webapp.deployName = "acme-intranet";
+   
+   module.sample.acmeIntranet.portlet =  new Project("org.exoplatform.platform", "exo.platform.sample.acme-intranet.portlet", "war", platformVersion);
+   module.sample.acmeIntranet.portlet.deployName = "acme-intranet-portlet";
    
     // default website
    module.sample.defaultWebsite = {};

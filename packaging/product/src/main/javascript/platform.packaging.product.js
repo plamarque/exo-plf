@@ -70,6 +70,9 @@ function getProduct(version) {
   // acme social intranet
   product.addDependencies(platform.sample.acmeIntranet.webapp);
   
+  // acme social intranet portlet
+  product.addDependencies(platform.sample.acmeIntranet.portlet);
+  
   /* IDE */
   product.addDependencies(platform.ide.webapp);
 
@@ -161,20 +164,12 @@ function getProduct(version) {
   product.addDependencies(new Project("mysql","mysql-connector-java","jar","5.1.13"))
 
   /* cleanup duplicated lib */
-//  product.removeDependency(new Project("org.hsqldb", "hsqldb", "jar", "2.0.0"));
   product.removeDependency(new Project("commons-io", "commons-io", "jar", "1.3.2"));
   product.removeDependency(new Project("commons-httpclient", "commons-httpclient", "jar", "3.0"));
-//  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.1"));
-//  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.2.1"));
-//  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4"));
   product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.6"));
-  product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.8.0"));
-  product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.7.0"));
-//  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "2.1"));
   product.removeDependency(new Project("commons-digester", "commons-digester", "jar", "1.6"));
   product.removeDependency(new Project("xstream", "xstream", "jar", "1.0.2"));
   product.removeDependency(new Project("ical4j", "ical4j", "jar", "0.9.20"));
-//  product.removeDependency(new Project("commons-lang", "commons-lang", "jar", "2.3"));
   
   /* remove extensions config . We don't need them because PLF declares a global container config in exo.platform.config */
   product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-packaging-ecmdemo-config", "jar", wcm.version));
@@ -184,23 +179,17 @@ function getProduct(version) {
   product.removeDependency(new Project("org.exoplatform.ks", "exo.ks.extension.config", "jar", ks.version));
   product.removeDependency(new Project("org.exoplatform.cs", "exo.cs.extension.config", "jar", cs.version));
 
-//  product.addDependencies(new Project("commons-beanutils", "commons-beanutils", "jar", "1.7.0"));
-//  product.addDependencies(new Project("commons-beanutils", "commons-beanutils-core", "jar", "1.7.0"));
-//  product.addDependencies(new Project("commons-digester", "commons-digester", "jar", "1.7"));
   product.addDependencies(new Project("commons-httpclient", "commons-httpclient", "jar", "3.1"));
   product.addDependencies(new Project("findbugs", "annotations", "jar", "1.0.0"));
-
-  product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-core-parser", "jar",  "2.2.0-Beta2"));
-  product.removeDependency(new Project("org.exoplatform.ecms", "exo-ecms-core-webui", "jar", "2.2.0-Beta2"));
 
   product.module = portal ;
   product.dependencyModule = [kernel, core, ws, eXoJcr, cs, ks, social, workflow, dms, wcm];
 
   // Use new version of commons-logging override Product.preDeploy()
   product.preDeploy = function() { 
-	  product.removeDependency(new Project("commons-logging", "commons-logging", "jar", "1.0.4"));
-	  product.addDependencies(new Project("commons-logging", "commons-logging", "jar", "1.1.1"));
+    product.removeDependency(new Project("commons-logging", "commons-logging", "jar", "1.0.4"));
+    product.addDependencies(new Project("commons-logging", "commons-logging", "jar", "1.1.1"));
   }
-  
+
   return product ;
 }
