@@ -169,15 +169,15 @@
       <version>${org.exoplatform.cs.version}</version>
       <type>pom</type>
       <exclusions>
-        <exclusion>
+        <!--exclusion>
           <groupId>commons-io</groupId>
           <artifactId>commons-io</artifactId>
-        </exclusion>
+        </exclusion-->
         <!--exclusion>
           <groupId>org.apache.pdfbox</groupId>
           <artifactId>fontbox</artifactId>
-        </exclusion-->
-        <!--exclusion>
+        </exclusion>
+        <exclusion>
           <groupId>javax.mail</groupId>
           <artifactId>mail</artifactId>
         </exclusion-->
@@ -189,14 +189,14 @@
       <version>${org.exoplatform.ks.version}</version>
       <type>pom</type>
       <exclusions>
-        <!--exclusion>
+        <exclusion>
           <groupId>org.apache.pdfbox</groupId>
           <artifactId>fontbox</artifactId>
-        </exclusion-->
-        <!--exclusion>
+        </exclusion>
+        <exclusion>
           <groupId>javax.mail</groupId>
           <artifactId>mail</artifactId>
-        </exclusion-->
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -711,6 +711,13 @@
       <version>${commons-digester.version}</version>
       <type>jar</type>
     </dependency>
+    
+    <!--dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>${commons-beanutils.version}</version>
+      <type>jar</type>
+    </dependency-->
 
     <dependency>
       <groupId>org.exoplatform.social</groupId>
@@ -1803,9 +1810,25 @@
       <version>${org.gatein.shindig.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.gatein.shindig</groupId>
+      <artifactId>shindig-gadgets</artifactId>
+      <version>${org.gatein.shindig.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.gatein.shindig</groupId>
+      <artifactId>shindig-features</artifactId>
+      <version>${org.gatein.shindig.version}</version>
+    </dependency>
+    <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
       <version>${commons-lang.version}</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${commons-codec.version}</version>
       <type>jar</type>
     </dependency>
     <dependency>

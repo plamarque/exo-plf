@@ -161,12 +161,15 @@ function getProduct(version) {
   product.addDependencies(new Project("mysql","mysql-connector-java","jar","5.1.13"))
 
   /* cleanup duplicated lib */
-  product.removeDependency(new Project("org.hsqldb", "hsqldb", "jar", "2.0.0"));
+//  product.removeDependency(new Project("org.hsqldb", "hsqldb", "jar", "2.0.0"));
+  product.removeDependency(new Project("commons-io", "commons-io", "jar", "1.3.2"));
   product.removeDependency(new Project("commons-httpclient", "commons-httpclient", "jar", "3.0"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.1"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "3.2.1"));
-  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4"));
+//  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4"));
   product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.6"));
+  product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.8.0"));
+  product.removeDependency(new Project("commons-beanutils", "commons-beanutils", "jar", "1.7.0"));
 //  product.removeDependency(new Project("commons-collections", "commons-collections", "jar", "2.1"));
   product.removeDependency(new Project("commons-digester", "commons-digester", "jar", "1.6"));
   product.removeDependency(new Project("xstream", "xstream", "jar", "1.0.2"));
@@ -198,10 +201,6 @@ function getProduct(version) {
 	  product.removeDependency(new Project("commons-logging", "commons-logging", "jar", "1.0.4"));
 	  product.addDependencies(new Project("commons-logging", "commons-logging", "jar", "1.1.1"));
   }
-
-  product.removeDependency(new Project("javax.mail", "mail", "jar", "1.4.2"));
-  product.removeDependency(new Project("org.apache.pdfbox", "fontbox", "jar", "1.1.0"));
-  product.removeDependency(new Project("org.exoplatform.commons", "exo.platform.commons.webui.ext", "jar", "1.1.0-Beta01"));  
-
+  
   return product ;
 }
