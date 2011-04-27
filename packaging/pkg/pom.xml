@@ -109,6 +109,11 @@
       <artifactId>shindig-gadgets</artifactId>
       <version>${org.gatein.shindig.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.gatein.shindig</groupId>
+      <artifactId>shindig-features</artifactId>
+      <version>${org.gatein.shindig.version}</version>
+    </dependency>
 
     <!-- ECMS -->
     <dependency>
