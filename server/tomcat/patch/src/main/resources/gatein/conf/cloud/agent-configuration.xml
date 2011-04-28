@@ -197,7 +197,7 @@
          <advices>
             <advice class-name="org.exoplatform.instrument.transformer.LimitRegisteredUsersAdvice">
                <parameters>
-                  <parameter value="5" name="user-limit" />
+                  <parameter value="10" name="user-limit" />
                </parameters>
             </advice>
          </advices>
@@ -211,7 +211,7 @@
          <advices>
             <advice class-name="org.exoplatform.instrument.transformer.TenancyRequestLimiterAdvice" />
             <parameters>
-               <parameter value="10" name="request-limit" />
+               <parameter value="100" name="request-limit" />
             </parameters>
          </advices>
       </pointcut>
@@ -244,7 +244,7 @@
          <advices>
             <advice class-name="org.exoplatform.instrument.transformer.LimitedRestResourceAdvice">
                <parameters>
-                  <parameter value="70" name="rest-resource-limit" />
+                  <parameter value="150" name="rest-resource-limit" />
                </parameters>
             </advice>
          </advices>
