@@ -21,6 +21,29 @@
 # Computes the absolute path of eXo
 cd `dirname "$0"`
 
+# resolve links - $0 may be a softlink
+PRG="$0"
+
+while [ -h "$PRG" ]; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+# Get standard environment variables
+PRGDIR=`dirname "$PRG"`
+
+# set CATALINA_TEMP
+[ -z "$CATALINA_TEMP" ] && CATALINA_TEMP=`cd "$PRGDIR" >/dev/null; pwd`
+
+# set PID in the file /temp/catalina.tmp
+PID=$$
+echo $PID > "$CATALINA_TEMP"/temp/catalina.tmp
+
 echo Starting eXo ...
 
 cd ./bin
@@ -28,9 +51,8 @@ cd ./bin
 if [ "$1" = "" ] ; then 
 	EXO_PROFILES="-Dexo.profiles=default"
 else
-	EXO_PROFILES="-Dexo.profiles=$1"
+	EXO_PROFILES="-Dexo.profiles=$*"
 fi
-
 
 echo eXo is launched with the $EXO_PROFILES option as profile
 
