@@ -502,12 +502,12 @@
     <dependency>
       <groupId>commons-pool</groupId>
       <artifactId>commons-pool</artifactId>
-      <version>1.2</version>
+      <version>${commons-pool.version}</version>
     </dependency>
     <dependency>
       <groupId>commons-dbcp</groupId>
       <artifactId>commons-dbcp</artifactId>
-      <version>1.2.1</version>
+      <version>${commons-dbcp.version}</version>
     </dependency>
     <dependency>
       <groupId>commons-logging</groupId>
@@ -1607,7 +1607,7 @@
     <dependency>
        <groupId>org.jcrom</groupId>
        <artifactId>jcrom</artifactId>
-       <version>1.2</version>
+       <version>${jcrom.version}</version>
        <type>jar</type>
     </dependency>
     <dependency>
