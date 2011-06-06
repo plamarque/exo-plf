@@ -363,12 +363,21 @@
       <version>1.1.1</version>
       <type>jar</type>
     </dependency>
-    <dependency>
+
+   <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>2.9.4</version>
+      <type>jar</type>
+   </dependency>
+   <dependency>
       <groupId>org.apache.lucene</groupId>
       <artifactId>lucene-regex</artifactId>
       <version>2.4.1</version>
       <type>jar</type>
     </dependency>
+
+
     <!-- eXo Cloud -->
     <dependency>
       <groupId>org.exoplatform.cloud-management</groupId>
@@ -489,6 +498,28 @@
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-pool</groupId>
+      <artifactId>commons-pool</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.1</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+      <type>jar</type>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>
@@ -628,6 +659,14 @@
       <version>${org.slf4j.version}</version>
       <type>jar</type>
     </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${org.slf4j.version}</version>
+      <type>jar</type>
+    </dependency>
+
 
     <dependency>
       <groupId>org.exoplatform.ks</groupId>
@@ -1560,6 +1599,24 @@
       <version>${javax.validation.version}</version>
     </dependency>
     <dependency>
+       <groupId>javax.resource</groupId>
+       <artifactId>connector-api</artifactId>
+       <version>1.5</version>
+       <type>jar</type>
+    </dependency>
+    <dependency>
+       <groupId>org.jcrom</groupId>
+       <artifactId>jcrom</artifactId>
+       <version>1.2</version>
+       <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>jdom</groupId>
+      <artifactId>jdom</artifactId>
+       <version>1.0</version>
+       <type>jar</type>
+     </dependency>
+    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>${hibernate-validator.version}</version>
@@ -1692,6 +1749,13 @@
       <artifactId>shindig-common</artifactId>
       <version>${org.gatein.shindig.version}</version>
     </dependency>
+    <dependency>
+      <groupId>net.sourceforge.nekohtml</groupId>
+      <artifactId>nekohtml</artifactId>
+      <version>1.9.9</version>
+      <type>jar</type>
+    </dependency>
+
     <!-- needed since switch to portal 3.2 -->
     <dependency>
       <groupId>org.gatein.wci</groupId>
@@ -1730,10 +1794,28 @@
       <type>jar</type>
     </dependency><!-- 1.6.4-->
     <dependency>
+       <groupId>org.jboss.cache</groupId>
+       <artifactId>jbosscache-core</artifactId>
+       <version>3.2.7.GA</version>
+       <type>jar</type>
+    </dependency>
+    <dependency>
       <groupId>org.exoplatform.commons</groupId>
       <artifactId>exo.platform.commons.webui.ext</artifactId>
       <version>${org.exoplatform.commons.version}</version>
       <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>exo.platform.commons.webui</artifactId>
+      <version>${org.exoplatform.commons.version}</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.exoplatform.commons</groupId>
+      <artifactId>exo.platform.commons.resources</artifactId>
+      <version>${org.exoplatform.commons.version}</version>
+      <type>war</type>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.platform</groupId>
