@@ -104,7 +104,7 @@
       <version>${org.exoplatform.social.version}</version>
       <type>js</type>
     </dependency>
-  <!--
+
     <dependency>
       <groupId>org.gatein.shindig</groupId>
       <artifactId>shindig-gadgets</artifactId>
@@ -115,7 +115,7 @@
       <artifactId>shindig-features</artifactId>
       <version>${org.gatein.shindig.version}</version>
     </dependency>
--->
+
 
     <!-- ECMS -->
     <dependency>
@@ -1752,14 +1752,14 @@
       <artifactId>shindig-common</artifactId>
       <version>${org.gatein.shindig.version}</version>
     </dependency>
- <!--
+
     <dependency>
       <groupId>net.sourceforge.nekohtml</groupId>
       <artifactId>nekohtml</artifactId>
-      <version>1.9.9</version>
+      <version>1.9.12</version>
       <type>jar</type>
     </dependency>
--->
+
 
     <!-- needed since switch to portal 3.2 -->
     <dependency>
