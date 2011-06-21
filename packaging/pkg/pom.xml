@@ -1753,12 +1753,14 @@
       <version>${org.gatein.shindig.version}</version>
     </dependency>
 
+<!--
     <dependency>
       <groupId>net.sourceforge.nekohtml</groupId>
       <artifactId>nekohtml</artifactId>
       <version>1.9.12</version>
       <type>jar</type>
     </dependency>
+-->
 
 
     <!-- needed since switch to portal 3.2 -->
@@ -1801,7 +1803,7 @@
     <dependency>
        <groupId>org.jboss.cache</groupId>
        <artifactId>jbosscache-core</artifactId>
-       <version>3.2.6.GA</version>
+       <version>3.2.7.GA</version>
        <type>jar</type>
     </dependency>
     <dependency>
