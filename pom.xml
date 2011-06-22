@@ -14,10 +14,11 @@
   <description>Parent POM for Platform Cloud</description>
 
   <properties>
+
+     <org.exoplatform.kernel.version>2.3.0-CR3</org.exoplatform.kernel.version>
+    <org.exoplatform.core.version>2.4.0-CR3</org.exoplatform.core.version>
+    <org.exoplatform.ws.version>2.2.0-CR3</org.exoplatform.ws.version>
     <!--
-     org.exoplatform.kernel.version>2.3.0-CR1</org.exoplatform.kernel.version>
-    <org.exoplatform.core.version>2.4.0-CR1</org.exoplatform.core.version>
-    <org.exoplatform.ws.version>2.2.0-CR1</org.exoplatform.ws.version>
     <org.exoplatform.jcr-services.version>1.14.0-GA-SNAPSHOT</org.exoplatform.jcr-services.version>
     -->
     <org.exoplatform.jcr.version>1.14.0-CR3</org.exoplatform.jcr.version>
