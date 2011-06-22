@@ -19,25 +19,19 @@
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
       <artifactId>kernel.packaging.module</artifactId>
-      <version>2.3.0-CR3</version>
+      <version>${org.exoplatform.kernel.version}</version>
       <type>js</type>
     </dependency>
-   <dependency>
-      <groupId>org.exoplatform.kernel</groupId>
-       <artifactId>exo.kernel.commons</artifactId>
-       <version>2.3.0-CR3</version>
-       <type>jar</type>
-  </dependency>
     <dependency>
       <groupId>org.exoplatform.core</groupId>
       <artifactId>core.packaging.module</artifactId>
-      <version>2.4.0-CR3</version>
+      <version>${org.exoplatform.core.version}</version>
       <type>js</type>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.ws</groupId>
       <artifactId>ws.packaging.module</artifactId>
-      <version>2.2.0-CR3</version>
+      <version>${org.exoplatform.ws.version}</version>
       <type>js</type>
     </dependency>
     <dependency>
@@ -252,7 +246,7 @@
     <dependency>
       <groupId>org.exoplatform.core</groupId>
       <artifactId>exo.core.component.script.groovy</artifactId>
-      <version>2.4.0-CR3</version>
+      <version>${org.exoplatform.core.version}</version>
       <type>jar</type>
     </dependency>
     <dependency>
@@ -694,7 +688,7 @@
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
       <artifactId>exo.kernel.component.command</artifactId>
-      <version>2.3.0-CR3</version>
+      <version>${org.exoplatform.kernel.version}</version>
       <type>jar</type>
     </dependency>
 
@@ -757,7 +751,7 @@
     <dependency>
       <groupId>org.exoplatform.ws</groupId>
       <artifactId>exo.ws.rest.core</artifactId>
-      <version>2.2.0-CR3</version>
+      <version>${org.exoplatform.ws.version}</version>
       <type>jar</type>
     </dependency>
 
@@ -841,7 +835,7 @@
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
       <artifactId>exo.kernel.component.ext.cache.impl.jboss.v3</artifactId>
-      <version>2.3.0-CR3</version>
+      <version>${org.exoplatform.kernel.version}</version>
       <type>jar</type>
     </dependency>
 
@@ -1089,7 +1083,7 @@
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
       <artifactId>exo.kernel.component.cache</artifactId>
-      <version>2.3.0-CR3</version>
+      <version>${org.exoplatform.kernel.version}</version>
       <type>jar</type>
     </dependency>
 
@@ -1393,7 +1387,7 @@
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
       <artifactId>exo.kernel.component.common</artifactId>
-      <version>2.3.0-CR3</version>
+      <version>${org.exoplatform.kernel.version}</version>
       <type>jar</type>
     </dependency>
 
@@ -1779,7 +1773,7 @@
     <dependency>
       <groupId>org.exoplatform.core</groupId>
       <artifactId>exo.core.component.organization.jdbc</artifactId>
-      <version>2.4.0-CR3</version>
+      <version>${org.exoplatform.core.version}</version>
       <type>jar</type>
     </dependency>
     <dependency>
