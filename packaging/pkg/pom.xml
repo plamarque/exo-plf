@@ -23,6 +23,12 @@
       <type>js</type>
     </dependency>
     <dependency>
+      <groupId>org.exoplatform.kernel</groupId>
+      <artifactId>exo.kernel.commons</artifactId>
+      <version>${org.exoplatform.kernel.version}</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
       <groupId>org.exoplatform.core</groupId>
       <artifactId>core.packaging.module</artifactId>
       <version>${org.exoplatform.core.version}</version>
@@ -516,14 +522,14 @@
       <version>1.1.1</version>
       <type>jar</type>
     </dependency>
-  <!--
+
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
       <version>2.6</version>
       <type>jar</type>
     </dependency>
--->
+
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
