@@ -1613,18 +1613,21 @@
        <version>1.5</version>
        <type>jar</type>
     </dependency>
+<!--
     <dependency>
        <groupId>org.jcrom</groupId>
        <artifactId>jcrom</artifactId>
        <version>${jcrom.version}</version>
        <type>jar</type>
     </dependency>
+
     <dependency>
       <groupId>jdom</groupId>
       <artifactId>jdom</artifactId>
        <version>1.0</version>
        <type>jar</type>
      </dependency>
+     -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
