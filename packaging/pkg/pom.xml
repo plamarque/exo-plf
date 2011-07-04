@@ -1613,21 +1613,6 @@
        <version>1.5</version>
        <type>jar</type>
     </dependency>
-<!--
-    <dependency>
-       <groupId>org.jcrom</groupId>
-       <artifactId>jcrom</artifactId>
-       <version>${jcrom.version}</version>
-       <type>jar</type>
-    </dependency>
-
-    <dependency>
-      <groupId>jdom</groupId>
-      <artifactId>jdom</artifactId>
-       <version>1.0</version>
-       <type>jar</type>
-     </dependency>
-     -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
@@ -1725,11 +1710,6 @@
       <artifactId>xwiki-core-rendering-macro-code</artifactId>
       <version>2.3.2</version>
     </dependency>
-    <!--dependency>
-      <groupId>org.xwiki.contrib</groupId>
-      <artifactId>xwiki-macro-column</artifactId>
-      <version>${column-macro.version}</version>
-    </dependency-->
     <dependency>
       <groupId>org.wikimodel</groupId>
       <artifactId>org.wikimodel.wem</artifactId>
@@ -1761,16 +1741,6 @@
       <artifactId>shindig-common</artifactId>
       <version>${org.gatein.shindig.version}</version>
     </dependency>
-
-<!--
-    <dependency>
-      <groupId>net.sourceforge.nekohtml</groupId>
-      <artifactId>nekohtml</artifactId>
-      <version>1.9.12</version>
-      <type>jar</type>
-    </dependency>
--->
-
 
     <!-- needed since switch to portal 3.2 -->
     <dependency>
