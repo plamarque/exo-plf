@@ -78,6 +78,9 @@ function getProduct(version) {
   /* IDE */
   product.addDependencies(platform.ide.webapp);
 
+ /* WebOS */
+  product.addDependencies(platform.webos.ext);
+
   /* eXo Cloud */
   product.addDependencies(platform.cloud.webapp);
   
