@@ -126,7 +126,7 @@ function getModule(params)
 
    module.cloud.cloudagent =
        new Project("org.exoplatform.cloud-management", "cloud-agent-war", "war", cloudVersion);
-   module.cloud.cloudagent.deployName = "CloudAgent"; 
+   module.cloud.cloudagent.deployName = "cloud-agent"; 
 
    module.cloud.cloudadmin =                                
        new Project("org.exoplatform.cloud-management", "cloud-admin-war", "war", cloudVersion).
@@ -151,7 +151,7 @@ function getModule(params)
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-tomcat-valve", "jar", cloudVersion)).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-multitenant-rest-services", "jar", cloudVersion)).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-instrument-runtime", "jar", cloudVersion));
-   module.cloud.cloudadmin.deployName = "CloudAdmin"; 
+   module.cloud.cloudadmin.deployName = "cloud-admin"; 
    
    // acme website
    module.sample = {};
