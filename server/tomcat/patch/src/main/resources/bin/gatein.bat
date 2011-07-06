@@ -29,14 +29,15 @@ set LOG_OPTS=-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Si
 set SECURITY_OPTS=-Djava.security.auth.login.config=..\conf\jaas.conf
 set JMX_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=6969 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false
 set EXO_OPTS=-Dexo.product.developing=false -Dexo.conf.dir.name=gatein/conf
-set EXO_CLOUD_OPTS=-javaagent:..\lib\cloud-instrument-1.0-Alpha09.jar=..\gatein\conf\cloud\agent-configuration.xml -Dtenant.masterhost=localhost -Dtenant.repository.name=repository -Dtenant.jcr.data.dir=../gatein/data/jcr
+set EXO_CLOUD_OPTS=-javaagent:..\lib\cloud-instrument-1.1-M1.jar=..\gatein\conf\cloud\agent-configuration.xml -Dtenant.masterhost=localhost -Dtenant.repository.name=repository -Dtenant.jcr.data.dir=../gatein/data/jcr
 set EXO_CLOUD_SECURITY_OPTS=-Djava.security.manager=org.exoplatform.cloudmanagement.security.TenantSecurityManager -Djava.security.policy==..\conf\catalina.policy
+set EXO_CLOUD_ADMIN_OPTS=-Dcloud.admin.log.dir=../logs/cloud-admin -Dcloud.admin.data.dir=../data -Dcloud.admin.configuration.dir=../exo-admin-conf -Dcloud.admin.configuration.file=../exo-admin-conf/admin.properties
 
 if "%EXO_PROFILES%" == "" (
   set EXO_PROFILES=-Dexo.profiles=default,cloud
 )
 
-set JAVA_OPTS=-Xms512m -Xmx2g -XX:MaxPermSize=256m %LOG_OPTS% %SECURITY_OPTS% %EXO_CLOUD_SECURITY_OPTS% %EXO_OPTS% %EXO_PROFILES% %EXO_CLOUD_OPTS% %JMX_OPTS%
+set JAVA_OPTS=-Xms512m -Xmx2g -XX:MaxPermSize=256m %LOG_OPTS% %SECURITY_OPTS% %EXO_CLOUD_SECURITY_OPTS% %EXO_CLOUD_ADMIN_OPTS% %EXO_OPTS% %EXO_PROFILES% %EXO_CLOUD_OPTS% %JMX_OPTS%
 
 rem Launches the server
 call catalina.bat %*

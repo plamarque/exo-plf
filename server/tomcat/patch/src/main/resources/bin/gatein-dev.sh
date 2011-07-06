@@ -31,11 +31,12 @@ EXO_OPTS="-Dexo.product.developing=false -Dexo.conf.dir.name=gatein/conf"
 
 JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=6969 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 EXO_OPTS="-Dexo.product.developing=false -Dexo.conf.dir.name=gatein/conf"
-EXO_CLOUD_OPTS="-javaagent:../lib/cloud-instrument-1.0-Alpha09.jar=../gatein/conf/cloud/agent-configuration.xml \
+EXO_CLOUD_OPTS="-javaagent:../lib/cloud-instrument-1.1-M1.jar=../gatein/conf/cloud/agent-configuration.xml \
 		-Dtenant.masterhost=localhost \
 		-Dtenant.repository.name=repository \
 		-Dtenant.jcr.data.dir=../gatein/data/jcr"
 EXO_CLOUD_SECURITY_OPTS="-Djava.security.manager=org.exoplatform.cloudmanagement.security.TenantSecurityManager -Djava.security.policy==../conf/catalina.policy"
+EXO_CLOUD_ADMIN_OPTS="-Dcloud.admin.log.dir=../logs/cloud-admin -Dcloud.admin.data.dir=../data -Dcloud.admin.configuration.dir=../exo-admin-conf -Dcloud.admin.configuration.file=../exo-admin-conf/admin.properties"
 
 # Remote debug configuration
 REMOTE_DEBUG="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
@@ -44,7 +45,7 @@ if [ "$EXO_PROFILES" = "" ] ; then
 	EXO_PROFILES="-Dexo.profiles=default,cloud"
 fi
 
-JAVA_OPTS="-Xms512m -Xmx2g -XX:MaxPermSize=256m $JAVA_OPTS $LOG_OPTS $SECURITY_OPTS $EXO_OPTS $EXO_PROFILES $EXO_CLOUD_SECURITY_OPTS $EXO_CLOUD_OPTS $JMX_OPTS $REMOTE_DEBUG"
+JAVA_OPTS="-Xms512m -Xmx2g -XX:MaxPermSize=256m $JAVA_OPTS $LOG_OPTS $SECURITY_OPTS $EXO_OPTS $EXO_PROFILES $EXO_CLOUD_SECURITY_OPTS $EXO_CLOUD_ADMIN_OPTS $EXO_CLOUD_OPTS $JMX_OPTS $REMOTE_DEBUG"
 export JAVA_OPTS
 
 # Launches the server
