@@ -82,7 +82,8 @@ function getProduct(version) {
   product.addDependencies(platform.webos.ext);
 
   /* eXo Cloud */
-  product.addDependencies(platform.cloud.webapp);
+  product.addDependencies(platform.cloud.cloudagent);
+  product.addDependencies(platform.cloud.cloudadmin);
   
   /* ECMS */
   product.addDependencies(workflow.web.eXoWorkflowResources);

@@ -124,28 +124,34 @@ function getModule(params)
    // eXo Cloud
    module.cloud = {};
 
-   module.cloud.webapp =                                
-   //    new Project("org.exoplatform.cloud-management", "cloud-management-console-gadget", "war", cloudVersion).
-       new Project("org.exoplatform.cloud-management", "cloud-management-console-application", "war", cloudVersion).
-        addDependency(new Project("org.exoplatform.cloud-management", "cloud-multitenancy", "jar", cloudVersion)).
-          addDependency(new Project("ch.qos.logback", "logback-core", "jar", "0.9.20")).
-          addDependency(new Project("ch.qos.logback", "logback-classic", "jar", "0.9.20")).
-          addDependency(new Project("mx4j", "mx4j-tools", "jar", "3.0.1")).
-        addDependency(new Project("org.exoplatform.cloud-management", "cloud-common", "jar", cloudVersion)).
-          addDependency(new Project("commons-io", "commons-io", "jar", "2.0")).
-          addDependency(new Project("commons-logging", "commons-logging", "jar", "1.1.1")).
-        addDependency(new Project("org.exoplatform.cloud-management", "cloud-rest", "jar", cloudVersion)).
+   module.cloud.cloudagent =
+       new Project("org.exoplatform.cloud-management", "cloud-agent-war", "war", cloudVersion);
+   module.cloud.cloudagent.deployName = "CloudAgent"; 
+
+   module.cloud.cloudadmin =                                
+       new Project("org.exoplatform.cloud-management", "cloud-admin-war", "war", cloudVersion).
+        addDependency(new Project("ch.qos.logback", "logback-core", "jar", "0.9.20")).
+        addDependency(new Project("ch.qos.logback", "logback-classic", "jar", "0.9.20")).
+        addDependency(new Project("mx4j", "mx4j-tools", "jar", "3.0.1")).
+        addDependency(new Project("commons-io", "commons-io", "jar", "2.0")).
+        addDependency(new Project("commons-logging", "commons-logging", "jar", "1.1.1")).
+        addDependency(new Project("asm", "asm", "jar", "3.2")).
+        addDependency(new Project("asm", "asm-commons", "jar", "3.2")).
+        addDependency(new Project("asm", "asm-util", "jar", "3.2")).
+        addDependency(new Project("asm", "asm-analysis", "jar", "3.2")).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-agent", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-admin-valve", "jar", cloudVersion)).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-instrument", "jar", cloudVersion)).
-          addDependency(new Project("asm", "asm", "jar", "3.2")).
-          addDependency(new Project("asm", "asm-commons", "jar", "3.2")).
-          addDependency(new Project("asm", "asm-util", "jar", "3.2")).
-          addDependency(new Project("asm", "asm-analysis", "jar", "3.2")).
-        addDependency(new Project("org.exoplatform.cloud-management", "cloud-statistic", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-multitenancy", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-services-common", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-rest", "jar", cloudVersion)).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-rest-groovy", "jar", cloudVersion)).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-security", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-statistic", "jar", cloudVersion)).
         addDependency(new Project("org.exoplatform.cloud-management", "cloud-tomcat-valve", "jar", cloudVersion)).
-        addDependency(new Project("org.exoplatform.cloud-management", "cloud-ide-rest", "jar", cloudVersion));
-   module.cloud.webapp.deployName = "CloudManagerConsole"; 
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-multitenant-rest-services", "jar", cloudVersion)).
+        addDependency(new Project("org.exoplatform.cloud-management", "cloud-instrument-runtime", "jar", cloudVersion));
+   module.cloud.cloudadmin.deployName = "CloudAdmin"; 
    
    // acme website
    module.sample = {};
