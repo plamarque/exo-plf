@@ -36,7 +36,7 @@ EXO_CLOUD_OPTS="-javaagent:../lib/cloud-instrument-1.1-M1.jar=../gatein/conf/clo
 		-Dtenant.repository.name=repository \
 		-Dtenant.jcr.data.dir=../gatein/data/jcr"
 EXO_CLOUD_SECURITY_OPTS="-Djava.security.manager=org.exoplatform.cloudmanagement.security.TenantSecurityManager -Djava.security.policy==../conf/catalina.policy"
-EXO_CLOUD_ADMIN_OPTS="-Dcloud.admin.log.dir=../logs/cloud-admin -Dcloud.admin.data.dir=../data -Dcloud.admin.configuration.dir=../gatein/conf/exo-admin-conf -Dcloud.admin.configuration.file=../gatein/conf/exo-admin-conf/admin.properties"
+EXO_CLOUD_ADMIN_OPTS="-Dcloud.admin.log.dir=../logs/cloud-admin -Dcloud.admin.data.dir=../gatein/data -Dcloud.admin.configuration.dir=../gatein/conf/exo-admin-conf -Dcloud.admin.configuration.file=../gatein/conf/exo-admin-conf/admin.properties"
 
 if [ "$EXO_PROFILES" = "" ] ; then 
 	EXO_PROFILES="-Dexo.profiles=default,cloud"
