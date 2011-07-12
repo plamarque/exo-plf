@@ -4,26 +4,28 @@
   <parent>
     <groupId>org.exoplatform.platform</groupId>
     <artifactId>exo.platform.parent</artifactId>
-    <version>3.5.0-M3</version>
+    <version>3.5.0-M4-SNAPSHOT</version>
   </parent>
   <groupId>org.exoplatform.platform</groupId>
   <artifactId>exo.platform.parent-cloud</artifactId>
-  <version>3.5.0-M3-CLOUD-SNAPSHOT</version>
+  <version>3.5.0-M4-CLOUD-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Platform Cloud</name>
   <description>Parent POM for Platform Cloud</description>
 
   <properties>
 
+<!--
      <org.exoplatform.kernel.version>2.3.0-CR3</org.exoplatform.kernel.version>
     <org.exoplatform.core.version>2.4.0-CR3</org.exoplatform.core.version>
     <org.exoplatform.ws.version>2.2.0-CR3</org.exoplatform.ws.version>
 
     <org.exoplatform.jcr-services.version>1.14.0-CR3</org.exoplatform.jcr-services.version>
     <org.exoplatform.jcr.version>1.14.0-CR3</org.exoplatform.jcr.version>
+-->
     <org.exoplatform.cloud-management.version>1.0-Alpha09</org.exoplatform.cloud-management.version>
     <!--org.exoplatform.ecms.version>2.2.0-Beta3-CLOUD-SNAPSHOT</org.exoplatform.ecms.version-->
-    <org.exoplatform.platform.version>3.5.0-M3</org.exoplatform.platform.version>
+    <org.exoplatform.platform.version>3.5.0-M4-SNAPSHOT</org.exoplatform.platform.version>
     <gwt.version>2.0.4</gwt.version>
 
     <asm.version>3.2</asm.version>

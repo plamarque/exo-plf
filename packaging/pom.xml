@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.exoplatform.platform</groupId>
     <artifactId>exo.platform.parent-cloud</artifactId>
-    <version>3.5.0-M3-CLOUD-SNAPSHOT</version>
+    <version>3.5.0-M4-CLOUD-SNAPSHOT</version>
   </parent>
   <artifactId>exo.platform.packaging</artifactId>
   <packaging>pom</packaging>
