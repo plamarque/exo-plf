@@ -910,6 +910,13 @@
     </dependency>
 
     <dependency>
+      <groupId>org.exoplatform</groupId>
+      <artifactId>exo-jcr-services</artifactId>
+      <version>${org.exoplatform.jcr-services.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
       <groupId>org.exoplatform.ecms</groupId>
       <artifactId>exo-ecms-apps-gadget-publication</artifactId>
       <version>${org.exoplatform.ecms.version}</version>
