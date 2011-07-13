@@ -2127,6 +2127,62 @@
   </listener>]]></replacevalue>
                 </replace>
 
+
+
+ <replace file="${project.build.directory}/tomcat/webapps/portal/WEB-INF/web.xml">
+                  <replacetoken><![CDATA[  <servlet-mapping>
+    <servlet-name>RestServer</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>]]></replacetoken>
+                  <replacevalue><![CDATA[<servlet-mapping>
+    <servlet-name>RestServer</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>RestServer</servlet-name>
+    <url-pattern>/rest/private/*</url-pattern>
+  </servlet-mapping>]]></replacevalue>
+                </replace>
+
+
+ <replace file="${project.build.directory}/tomcat/webapps/portal/WEB-INF/web.xml">
+                  <replacetoken><![CDATA[ <security-constraint>
+		<web-resource-collection>
+	  	<web-resource-name>user authentication</web-resource-name>
+	  	<url-pattern>/private/*</url-pattern>
+      <url-pattern>/standalone/*</url-pattern>
+	  	<http-method>POST</http-method>
+	  	<http-method>GET</http-method>
+	  </web-resource-collection>
+		<auth-constraint>
+	  	<role-name>users</role-name>
+	  </auth-constraint>
+		<user-data-constraint>
+	  	<transport-guarantee>NONE</transport-guarantee>
+	  </user-data-constraint>
+	</security-constraint>]]></replacetoken>
+                  <replacevalue><![CDATA[<security-constraint>
+		<web-resource-collection>
+	  	<web-resource-name>user authentication</web-resource-name>
+              <url-pattern>/rest/private/*</url-pattern>
+	  	<url-pattern>/private/*</url-pattern>
+      <url-pattern>/standalone/*</url-pattern>
+	  	<http-method>POST</http-method>
+	  	<http-method>GET</http-method>
+	  </web-resource-collection>
+		<auth-constraint>
+	  	<role-name>users</role-name>
+	  </auth-constraint>
+		<user-data-constraint>
+	  	<transport-guarantee>NONE</transport-guarantee>
+	  </user-data-constraint>
+	</security-constraint>]]></replacevalue>
+                </replace>
+
+
+
+
                 <zip destfile="${project.build.directory}/tomcat/webapps/portal.war" basedir="${project.build.directory}/tomcat/webapps/portal" />
                 <delete dir="${project.build.directory}/tomcat/webapps/portal" />
 
