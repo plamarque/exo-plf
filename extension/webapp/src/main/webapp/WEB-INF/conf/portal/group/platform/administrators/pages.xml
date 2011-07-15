@@ -165,5 +165,6 @@
       <show-application-state>true</show-application-state>                                                                                                                                                    
       <show-application-mode>true</show-application-mode>                                                                                                                                                      
     </portlet-application>                                                                                                                                                                                     
-  </page>              
+  </page>
+              
 </page-set>
