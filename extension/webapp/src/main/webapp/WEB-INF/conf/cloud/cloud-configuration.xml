@@ -138,14 +138,23 @@
 
   <!-- Support of SendPasswordByMailPlugin - use from PLF  -->
   <!--
-    component> <key>org.exoplatform.services.mail.MailService</key>
-    <type>org.exoplatform.services.mail.impl.MailServiceImpl</type> <init-params> <properties-param>
-    <name>config</name> <property name="mail.smtp.host" value="smtp.gmail.com"/> <property
-    name="mail.smtp.port" value="465"/> <property name="mail.transport.protocol" value="smtp"/> <property
-    name="mail.smtp.auth" value="true"/> <property name="mail.smtp.auth.username"
-    value="damonzaza@gmail.com"/> <property name="mail.smtp.auth.password" value="9_chudo_1"/> <property
-    name="mail.smtp.socketFactory.class" value="javax.net.ssl.SSLSocketFactory" /> <property
-    name="mail.smtp.socketFactory.fallback" value="false" /> </properties-param> </init-params> </component
+    <component> 
+      <key>org.exoplatform.services.mail.MailService</key>
+      <type>org.exoplatform.services.mail.impl.MailServiceImpl</type> 
+      <init-params> 
+        <properties-param>
+          <name>config</name>  
+          <property name="mail.smtp.host" value="smtp.gmail.com"/> 
+          <property name="mail.smtp.port" value="465"/> 
+          <property name="mail.transport.protocol" value="smtp"/> 
+          <property name="mail.smtp.auth" value="true"/> 
+          <property name="mail.smtp.auth.username"  value="damonzaza@gmail.com"/> 
+          <property name="mail.smtp.auth.password" value="9_chudo_1"/> 
+          <property name="mail.smtp.socketFactory.class" value="javax.net.ssl.SSLSocketFactory" /> 
+          <property name="mail.smtp.socketFactory.fallback" value="false" /> 
+        </properties-param> 
+      </init-params> 
+    </component>
   -->
 
   <!-- TemplateResolver configuration -->
@@ -277,16 +286,30 @@
 
   <!-- MySQL configuration -->
   <!--
-    <component> <key>org.exoplatform.services.database.creator.DBCreator</key>
-    <type>org.exoplatform.services.database.creator.DBCreator</type> <init-params> <properties-param>
-    <name>db-connection</name> <description>database connection properties</description> <property
-    name="driverClassName" value="com.mysql.jdbc.Driver"/> <property name="url"
-    value="jdbc:mysql://localhost:3306/"/> <property name="username" value="root"/> <property name="password"
-    value="root"/> <property name="maxActive" value="100" /> <property name="maxIdle" value="2" /> <property
-    name="initialSize" value="5" /> </properties-param> <properties-param> <name>db-creation</name>
-    <description>database creation properties</description> <property name="scriptPath"
-    value="../${exo.conf.dir.name}/cloud/databases/mysqldb-schema.sql"/> <property name="username"
-    value="root"/> <property name="password" value="root"/> </properties-param> </init-params> </component>
+    <component> 
+      <key>org.exoplatform.services.database.creator.DBCreator</key>
+      <type>org.exoplatform.services.database.creator.DBCreator</type> 
+      <init-params> 
+        <properties-param>
+          <name>db-connection</name> 
+          <description>database connection properties</description> 
+          <property name="driverClassName" value="com.mysql.jdbc.Driver"/> 
+          <property name="url" value="jdbc:mysql://localhost:3306/"/> 
+          <property name="username" value="root"/> 
+          <property name="password" value="root"/> 
+          <property name="maxActive" value="100" /> 
+          <property name="maxIdle" value="2" /> 
+          <property name="initialSize" value="5" /> 
+        </properties-param> 
+        <properties-param> 
+          <name>db-creation</name>
+          <description>database creation properties</description> 
+          <property name="scriptPath" value="../${exo.conf.dir.name}/cloud/databases/mysqldb-schema.sql"/> 
+          <property name="username" value="root"/> 
+          <property name="password" value="root"/> 
+        </properties-param> 
+      </init-params> 
+    </component>
   -->
 
   <!-- Backup service -->
@@ -316,11 +339,17 @@
 
   <!-- JCR Organiation service -->
   <!--
-    component> <key>org.exoplatform.services.organization.OrganizationService</key>
-    <type>org.exoplatform.services.jcr.ext.organization.JCROrganizationServiceImpl</type> <init-params>
-    <value-param> <name>storage-workspace</name> <description>Workspace in default repository where
-    organization storage will be created</description> <value>portal-system</value> </value-param>
-    </init-params> </component
+    <component> 
+      <key>org.exoplatform.services.organization.OrganizationService</key>
+      <type>org.exoplatform.services.jcr.ext.organization.JCROrganizationServiceImpl</type> 
+      <init-params>
+        <value-param> 
+          <name>storage-workspace</name> 
+          <description>Workspace in default repository where organization storage will be created</description> 
+          <value>portal-system</value> 
+        </value-param>
+      </init-params> 
+    </component>
   -->
 
   <!-- JNDI -->
@@ -397,27 +426,68 @@
   <!-- MySQL Configuration -->
   <!--
     <external-component-plugins>
-    <target-component>org.exoplatform.services.naming.InitialContextInitializer</target-component>
-    <component-plugin> <name>bind.datasource</name> <set-method>addPlugin</set-method>
-    <type>org.exoplatform.services.naming.BindReferencePlugin</type> <init-params> <value-param>
-    <name>bind-name</name> <value>${tenant.repository.name}</value> </value-param> <value-param>
-    <name>class-name</name> <value>javax.sql.DataSource</value> </value-param> <value-param>
-    <name>factory</name> <value>org.apache.commons.dbcp.BasicDataSourceFactory</value> </value-param>
-    <properties-param> <name>ref-addresses</name> <description>ref-addresses</description> <property
-    name="driverClassName" value="com.mysql.jdbc.Driver"/> <property name="url"
-    value="jdbc:mysql://localhost:3306/${tenant.repository.name}"/> <property name="username" value="root"/>
-    <property name="password" value="root"/> <property name="maxActive" value="100" /> <property
-    name="maxIdle" value="2" /> <property name="initialSize" value="5" /> </properties-param> </init-params>
-    </component-plugin> <component-plugin> <name>bind.datasource</name> <set-method>addPlugin</set-method>
-    <type>org.exoplatform.services.naming.BindReferencePlugin</type> <init-params> <value-param>
-    <name>bind-name</name> <value>exo-idm_portal</value> </value-param> <value-param> <name>class-name</name>
-    <value>javax.sql.DataSource</value> </value-param> <value-param> <name>factory</name>
-    <value>org.apache.commons.dbcp.BasicDataSourceFactory</value> </value-param> <properties-param>
-    <name>ref-addresses</name> <description>ref-addresses</description> <property name="driverClassName"
-    value="com.mysql.jdbc.Driver"/> <property name="url" value="jdbc:mysql://localhost:3306/exo_idm_portal"/>
-    <property name="username" value="root"/> <property name="password" value="root"/> <property
-    name="maxActive" value="100" /> <property name="maxIdle" value="2" /> <property name="initialSize"
-    value="5" /> </properties-param> </init-params> </component-plugin> </external-component-plugins>
+      <target-component>org.exoplatform.services.naming.InitialContextInitializer</target-component>
+      <component-plugin> 
+        <name>bind.datasource</name> 
+        <set-method>addPlugin</set-method>
+       <type>org.exoplatform.services.naming.BindReferencePlugin</type> 
+       <init-params> 
+         <value-param>
+           <name>bind-name</name> 
+           <value>${tenant.repository.name}</value> 
+         </value-param> 
+         <value-param>
+           <name>class-name</name> 
+           <value>javax.sql.DataSource</value> 
+         </value-param> 
+         <value-param>
+            <name>factory</name> 
+            <value>org.apache.commons.dbcp.BasicDataSourceFactory</value> 
+         </value-param>
+         <properties-param> 
+           <name>ref-addresses</name> 
+           <description>ref-addresses</description> 
+           <property name="driverClassName" value="com.mysql.jdbc.Driver"/> 
+           <property name="url" value="jdbc:mysql://localhost:3306/${tenant.repository.name}"/> 
+           <property name="username" value="root"/>
+           <property name="password" value="root"/> 
+           <property name="maxActive" value="100" /> 
+           <property name="maxIdle" value="2" /> 
+           <property name="initialSize" value="5" /> 
+         </properties-param> 
+       </init-params>
+     </component-plugin> 
+     <component-plugin> 
+       <name>bind.datasource</name> 
+       <set-method>addPlugin</set-method>
+      <type>org.exoplatform.services.naming.BindReferencePlugin</type> 
+      <init-params> 
+        <value-param>
+          <name>bind-name</name> 
+          <value>exo-idm_portal</value> 
+        </value-param> 
+        <value-param> 
+          <name>class-name</name>
+           <value>javax.sql.DataSource</value> 
+        </value-param> 
+        <value-param> 
+          <name>factory</name>
+          <value>org.apache.commons.dbcp.BasicDataSourceFactory</value> 
+        </value-param> 
+        <properties-param>
+          <name>ref-addresses</name> 
+          <description>ref-addresses</description> 
+          <property name="driverClassName" value="com.mysql.jdbc.Driver"/> 
+          <property name="url" value="jdbc:mysql://localhost:3306/exo_idm_portal"/>
+          <property name="username" value="root"/> 
+          <property name="password" value="root"/> 
+          <property name="maxActive" value="100" /> 
+          <property name="maxIdle" value="2" /> 
+          <property name="initialSize" value="5" /> 
+        </properties-param> 
+      </init-params> 
+    </component-plugin> 
+  </external-component-plugins>
   -->
 
 </configuration>
