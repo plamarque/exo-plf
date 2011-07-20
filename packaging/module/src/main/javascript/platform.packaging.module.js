@@ -48,7 +48,7 @@ function getModule(params)
    module.cometd.deployName = "cometd";
 	
    // main portal container config	
-   module.config =  new Project("org.exoplatform.platform", "exo.platform.extension.config", "jar", platformVersion);
+   module.config =  new Project("org.exoplatform.platform", "exo.platform.extension.config", "jar", module.version);
    
    // platform extension
    module.extension = {};
