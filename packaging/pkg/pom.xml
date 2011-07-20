@@ -2145,8 +2145,9 @@
                 <delete dir="${project.build.directory}/tomcat/webapps/portal" />
 
 
-
+ 
  <!-- Patching cloud-agent.war -->
+<!--
 <mkdir dir="${project.build.directory}/tomcat/webapps/cloud-agent" />
                 <unzip src="${project.build.directory}/tomcat/webapps/cloud-agent.war" dest="${project.build.directory}/tomcat/webapps/cloud-agent" />
 
@@ -2215,7 +2216,7 @@
 
  <zip destfile="${project.build.directory}/tomcat/webapps/cloud-agent.war" basedir="${project.build.directory}/tomcat/webapps/cloud-agent" />
                 <delete dir="${project.build.directory}/tomcat/webapps/cloud-agent" />
-
+-->
               </target>
             </configuration>
             <goals>
