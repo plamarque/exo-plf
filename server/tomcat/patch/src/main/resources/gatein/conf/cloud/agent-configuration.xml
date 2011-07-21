@@ -151,11 +151,12 @@
             <recipient method-name="createValue" class-name="org.exoplatform.services.jcr.impl.core.value.ValueFactoryImpl" />
          </recipients>
          <advices>
-            <advice class-name="org.exoplatform.instrument.transformer.LimitJcrValueSize" />
+           <advice class-name="org.exoplatform.instrument.transformer.LimitJcrValueSize">
+             <parameters>
+                <parameter value="20971520" name="maximum-value-size" />
+             </parameters>
+           </advice>
          </advices>
-         <parameters>
-            <parameter value="20971520" name="maximum-value-size" />
-         </parameters>
       </pointcut>
 
       <!-- Collecting information about incoming/outcoming traffic and limit size of Response and Request body sizes -->
@@ -242,7 +243,7 @@
             <recipient method-name="addResource" class-name="org.exoplatform.cloudmanagement.rest.TenancyResourceBinder" />
          </recipients>
          <advices>
-            <advice class-name="org.exoplatform.instrument.transformer.LimitedRestResourceAdvice">
+            <advice class-name="org.exoplatform.instrument.transformer.LimitedRestResourceAdvice	">
                <parameters>
                   <parameter value="250" name="rest-resource-limit" />
                </parameters>
