@@ -66,13 +66,5 @@
 		    <page-reference>group::/platform/administrators::workflowAdministration</page-reference>
 	    </node>
     </node>
-
-    <!-- Cloud -->
-    <node>
-      <uri>cloud-console</uri>
-      <name>cloud-console</name>
-      <label>Cloud Manager Console</label>
-      <page-reference>group::/platform/administrators::cloud-console</page-reference>
-    </node>
   </page-nodes>
 </node-navigation>
