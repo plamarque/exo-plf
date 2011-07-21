@@ -31,7 +31,7 @@ set JMX_OPTS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=
 set EXO_OPTS=-Dexo.product.developing=false -Dexo.conf.dir.name=gatein/conf
 set EXO_CLOUD_OPTS=-javaagent:..\lib\cloud-instrument-1.1-M1.jar=..\gatein\conf\cloud\agent-configuration.xml -Dtenant.masterhost=localhost -Dtenant.repository.name=repository -Dtenant.jcr.data.dir=../gatein/data/jcr
 set EXO_CLOUD_SECURITY_OPTS=-Djava.security.manager=org.exoplatform.cloudmanagement.security.TenantSecurityManager -Djava.security.policy==..\conf\catalina.policy
-set EXO_CLOUD_ADMIN_OPTS=-Dcloud.admin.log.dir=../logs/cloud-admin -Dcloud.admin.data.dir=../gatin/data -Dcloud.admin.configuration.dir=../gatein/conf/exo-admin-conf -Dcloud.admin.configuration.file=../gatein/conf/exo-admin-conf/admin.properties
+set EXO_CLOUD_ADMIN_OPTS=-Dcloud.admin.log.dir=../logs/cloud-admin -Dcloud.admin.data.dir=../gatein/data -Dcloud.admin.configuration.dir=../gatein/conf/exo-admin-conf -Dcloud.admin.configuration.file=../gatein/conf/exo-admin-conf/admin.properties
 
 @REM Remote debug configuration
 set REMOTE_DEBUG=-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n

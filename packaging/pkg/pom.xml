@@ -1009,6 +1009,13 @@
     </dependency>
 
     <dependency>
+      <groupId>org.exoplatform.jcr</groupId>
+      <artifactId>exo.jcr.applications.backupconsole.dist</artifactId>
+      <version>${org.exoplatform.jcr.version}</version>
+      <type>zip</type>
+    </dependency>
+
+    <dependency>
       <groupId>org.exoplatform.ks</groupId>
       <artifactId>exo.ks.eXoApplication.faq.webapp</artifactId>
       <version>${org.exoplatform.ks.version}</version>
@@ -1896,6 +1903,24 @@
                   <artifactId>exopackage</artifactId>
                   <type>zip</type>
                   <outputDirectory>target/exopackage</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+           <execution>
+            <id>unpack-console</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <overWriteSnapshots>true</overWriteSnapshots>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.exoplatform.jcr</groupId>
+                  <artifactId>exo.jcr.applications.backupconsole.dist</artifactId>
+                  <type>zip</type>
+                  <outputDirectory>target/backup_console</outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>
